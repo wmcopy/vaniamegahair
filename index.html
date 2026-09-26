@@ -1,0 +1,1097 @@
+<!doctype html>
+<html lang="pt-BR" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#241B1A">
+<meta name="description" content="Vânia MegaHair — comprimento e volume com uma proposta pensada para os seus fios. Converse com Vânia e agende sua avaliação.">
+<title>Vânia MegaHair — Mega hair com avaliação individual</title>
+<style>
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/playfair-display@latest/latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:500;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/playfair-display@latest/latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/dm-sans@latest/latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url(https://cdn.jsdelivr.net/fontsource/fonts/dm-sans@latest/latin-500-normal.woff2) format('woff2')}
+:root{--marfim:#F7F2EA;--areia:#D8C8B6;--champanhe:#B59A78;--cacau:#6B5143;--espresso:#241B1A;--espresso-escuro:#1E1615;--champanhe-texto:#7d5f43;--glass:rgba(36,27,26,.55);--glass-forte:rgba(36,27,26,.86);--menu-vidro:rgba(36,27,26,.94);--hairline-clara:rgba(247,242,234,.14);--hairline-escura:rgba(107,81,67,.35);--ease:cubic-bezier(.22,1,.36,1);--serif:"Playfair Display",Georgia,"Times New Roman",serif;--sans:"DM Sans","Segoe UI",system-ui,-apple-system,sans-serif;--header-h:60px;--gutter:20px;--container:1200px}
+@media (min-width:1024px){:root{--header-h:72px;--gutter:40px}
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:clip}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--marfim);color:var(--espresso);font:400 1rem/1.6 var(--sans)}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+a{color:inherit}
+::selection{background:var(--champanhe);color:var(--espresso)}
+:focus-visible{outline:2px solid var(--champanhe);outline-offset:2px;border-radius:2px}
+[hidden]{display:none!important}
+.container{width:min(100% - 2*var(--gutter),var(--container));margin-inline:auto}
+.skip{position:absolute;left:-9999px;top:0;background:var(--espresso);color:var(--marfim);padding:12px 18px;z-index:100;text-decoration:none;font:500 .875rem var(--sans)}
+.skip:focus{left:12px;top:12px}
+.btn{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--champanhe);color:var(--espresso);border:0;border-radius:2px;padding:15px 28px;min-height:48px;font:500 .9375rem/1 var(--sans);letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:background-color .24s var(--ease),color .24s var(--ease)}
+.btn::before,.btn::after{content:"";position:absolute;z-index:-1;pointer-events:none}
+.btn::before{inset:0 auto 0 -100%;width:250%;background:linear-gradient(105deg,#a98b68,#b99d79 32%,#c7ad89 52%,#b79b77 72%,#a98b68);animation:btn-degrade 10s ease-in-out infinite alternate}
+.btn::after{top:-20%;bottom:-20%;left:0;width:36%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);transform:translateX(-160%) skewX(-17deg);animation:btn-flare 8s ease-in-out infinite}
+@keyframes btn-degrade{from{transform:translateX(0)}to{transform:translateX(35%)}}
+@keyframes btn-flare{0%,18%{transform:translateX(-160%) skewX(-17deg);opacity:0}23%{opacity:.65}42%,100%{transform:translateX(420%) skewX(-17deg);opacity:0}}
+.btn svg{width:18px;height:18px;flex:none;transition:transform .2s var(--ease)}
+@media (hover:hover) and (pointer:fine){.btn:hover{background:var(--cacau);color:var(--marfim)}
+.btn:hover::before{background:linear-gradient(105deg,#5e483e,#6b5143 32%,#806250 52%,#6b5143 72%,#5e483e)}
+.btn:hover svg{transform:translateX(4px)}
+}
+.btn:active{transform:scale(.985)}
+.btn--sm{padding:10px 18px;min-height:40px;font-size:.8125rem}
+.btn--sm svg{width:15px;height:15px}
+.header{position:fixed;inset:0 0 auto 0;z-index:70;background:var(--espresso);border:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;transition:background-color .24s var(--ease)}
+.header.is-scrolled{background:rgba(36,27,26,.78);-webkit-backdrop-filter:blur(14px) saturate(1.15);backdrop-filter:blur(14px) saturate(1.15)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.header.is-scrolled{background:var(--espresso)}
+}
+.header__inner{height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.brand__img{display:block;width:160px;height:48px;object-fit:contain;object-position:left center}
+.brand__text{font-family:var(--serif);font-weight:500;font-size:1.0625rem;letter-spacing:.02em;color:var(--marfim)}
+.nav{display:none}
+.header__cta{display:none}
+.burger{width:44px;height:44px;display:grid;place-items:center;padding:0;background:rgba(247,242,234,.05);border:1px solid rgba(247,242,234,.18);border-radius:11px;color:var(--marfim);cursor:pointer;transition:background-color .24s var(--ease),border-color .24s var(--ease)}
+.burger__box{position:relative;width:25px;height:20px;display:block}
+.burger__line{position:absolute;right:0;height:2px;border-radius:2px;background:currentColor;transition:transform .28s var(--ease),opacity .2s ease,width .28s var(--ease)}
+.burger__line:nth-child(1){top:1px;width:25px}
+.burger__line:nth-child(2){top:9px;width:17px;background:var(--champanhe)}
+.burger__line:nth-child(3){top:17px;width:25px}
+.burger.is-open .burger__line:nth-child(1){transform:translateY(8px) rotate(45deg)}
+.burger.is-open .burger__line:nth-child(2){opacity:0;transform:scaleX(.35)}
+.burger.is-open .burger__line:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+@media (hover:hover) and (pointer:fine){.burger:hover,.menu__close:hover{background:rgba(247,242,234,.11);border-color:rgba(181,154,120,.6)}}
+@media (min-width:1024px){.header__inner{display:grid;grid-template-columns:1fr auto 1fr;column-gap:16px}
+.brand{justify-self:start}
+.nav{display:block;justify-self:center}
+.nav__list{display:flex;gap:26px}
+.nav__list a{position:relative;display:inline-block;padding:6px 2px;color:var(--marfim);text-decoration:none;font:400 .875rem/1 var(--sans);letter-spacing:.05em}
+.nav__list a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--champanhe);transition:right .24s var(--ease)}
+@media (hover:hover) and (pointer:fine){.nav__list a:hover::after{right:0}
+}
+.nav__list a:focus-visible::after{right:0}
+.header__cta{display:inline-flex;justify-self:end}
+.burger{display:none}
+}
+.menu{position:fixed;inset:0;z-index:80;background:var(--menu-vidro);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--header-h) + 12px) var(--gutter) 40px}
+.menu__close{position:absolute;top:calc((var(--header-h) - 44px)/2);right:var(--gutter);width:44px;height:44px;display:grid;place-items:center;background:rgba(247,242,234,.05);border:1px solid rgba(247,242,234,.18);border-radius:11px;color:var(--marfim);cursor:pointer;transition:background-color .24s var(--ease),border-color .24s var(--ease)}
+.menu__close svg{width:22px;height:22px}
+.menu__link{display:block;padding:14px 2px;border-bottom:1px solid var(--hairline-clara);color:var(--marfim);text-decoration:none;font-family:var(--serif);font-size:1.75rem;line-height:1.2}
+.menu .btn{margin-top:28px;width:100%}
+.menu__link,.menu .btn{opacity:0;transform:translateY(12px);transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.menu.is-open .menu__link,.menu.is-open .btn{opacity:1;transform:none}
+.menu.is-open .menu__link:nth-of-type(1){transition-delay:.06s}
+.menu.is-open .menu__link:nth-of-type(2){transition-delay:.12s}
+.menu.is-open .menu__link:nth-of-type(3){transition-delay:.18s}
+.menu.is-open .btn{transition-delay:.24s}
+.hero{position:relative;display:flex;align-items:center;padding:calc(var(--header-h) + 22px) 0 36px;isolation:isolate}
+@media (min-width:1024px){.hero{min-height:clamp(520px,49.5vw,760px);padding:calc(var(--header-h) + 20px) 0 48px}
+}
+.hero__media{--hero-photo-offset:72px;position:absolute;inset:0;z-index:-2;overflow:hidden;background:var(--espresso)}
+.hero__media img{position:absolute;top:var(--hero-photo-offset);left:0;width:100%;height:100%;object-fit:cover;object-position:75% 32%;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 64px);mask-image:linear-gradient(to bottom,transparent,#000 64px)}
+.js .hero__media img{transform:scale(1.06);transition:transform 1.2s var(--ease)}
+.js .hero.is-loaded .hero__media img{transform:scale(1)}
+.hero__overlay{position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(36,27,26,.90) 0%,rgba(36,27,26,.52) 46%,rgba(36,27,26,.34) 76%,rgba(36,27,26,.28) 100%),linear-gradient(100deg,rgba(36,27,26,.86) 0%,rgba(36,27,26,.40) 55%,rgba(36,27,26,.10) 82%)}
+@media (min-width:1024px){.hero__media img{object-position:76% 30%}
+.hero__overlay{background:linear-gradient(90deg,rgba(36,27,26,.96) 0%,rgba(36,27,26,.90) 40%,rgba(36,27,26,.38) 62%,rgba(36,27,26,.10) 82%,rgba(36,27,26,.04) 100%)}
+}
+.hero__content{display:flex;flex-direction:column;align-items:flex-start;gap:12px;max-width:560px}
+@media (min-width:1024px){.hero__content{width:min(100% - 2*var(--gutter),560px);margin-left:max(var(--gutter),calc((100vw - 1200px)/2));margin-right:auto}
+}
+.eyebrow{font:500 .6875rem/1.4 var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--champanhe)}
+.eyebrow--claro{color:var(--champanhe-texto)}
+.hero__title{display:flex;flex-direction:column;color:var(--marfim);font-size:clamp(1.625rem,7vw,2.5rem);line-height:1.14;letter-spacing:.01em}
+.hero__title span:first-child{font-size:clamp(2.375rem,3.4vw,3rem);line-height:1.12;letter-spacing:0}
+.hero__title span:last-child{font-size:clamp(2rem,2.8vw,2.5rem);line-height:1.12}
+.hero__support{max-width:36ch;color:rgba(247,242,234,.88);font-size:clamp(.9375rem,3.9vw,1rem);line-height:1.65}
+.hero .btn svg{width:21px;height:21px}
+.hero__scroll{display:none}
+.band{background:var(--areia);scroll-margin-top:var(--header-h)}
+.band__list{display:grid;grid-template-columns:1fr 1fr 1fr}
+.band__item{position:relative;display:flex;align-items:center;justify-content:center;gap:7px;padding:10px 4px}
+.band__item + .band__item::before{content:"";position:absolute;left:0;top:24%;bottom:24%;width:1px;background:var(--hairline-escura)}
+.band__item svg{width:18px;height:18px;flex:none;fill:none;stroke:var(--cacau);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.band__item span{font-family:var(--serif);font-weight:500;font-size:.75rem;color:var(--espresso);white-space:nowrap}
+@media (min-width:480px){.band__item{gap:10px;padding:14px 8px}
+.band__item svg{width:22px;height:22px}
+.band__item span{font-size:.8125rem}
+}
+@media (max-width:479px){.band__item{padding-block:15px}
+.band__item svg{width:20px;height:20px}
+}
+@media (min-width:480px) and (max-width:599px){.band__item{padding-block:19px}
+}
+@media (min-width:1024px){.band__item{padding:24px 12px}
+.band__item svg{width:30px;height:30px}
+.band__item span{font-size:1rem}
+}
+.sobre{background:var(--marfim);padding:64px 0}
+@media (min-width:1024px){.sobre{padding:110px 0}
+}
+.sobre__grid{display:grid;gap:36px}
+@media (min-width:1024px){.sobre__grid{grid-template-columns:5fr 6fr;gap:64px;align-items:center}
+}
+.oval{position:relative;width:min(48%,240px);margin-inline:auto;aspect-ratio:5/6}
+@media (min-width:1024px){.oval{width:min(100%,440px);margin-inline:auto}
+}
+.oval::before{content:"";position:absolute;inset:0;transform:translate(18px,-12px);border:1px solid var(--champanhe);border-radius:50%;pointer-events:none}
+.oval__media{position:absolute;inset:0;border-radius:50%;overflow:hidden;z-index:1;background:var(--areia)}
+.resultado__camada{position:absolute;z-index:1;inset:0;display:grid;place-items:center;background:linear-gradient(160deg,#e9dfd2,#c4ae96)}
+.resultado__camada--depois{z-index:2;clip-path:inset(0 0 0 var(--pos,50%));background:linear-gradient(145deg,#cbb59c,#8d6e57)}
+.resultado__camada img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.resultado__aviso{max-width:16ch;color:var(--espresso);font:400 .75rem/1.4 var(--sans);text-align:center;padding:0 8px}
+.resultado__camada--depois .resultado__aviso{color:var(--marfim)}
+.resultado__camada.has-img .resultado__aviso{display:none}
+.resultado__rotulo{position:absolute;z-index:2;top:19%;padding:5px 9px;background:rgba(36,27,26,.78);color:var(--marfim);font:500 .625rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;pointer-events:none}
+.resultado__rotulo--antes{left:12%}
+.resultado__rotulo--depois{right:12%}
+.resultado__divisor{position:absolute;z-index:3;top:0;bottom:0;left:var(--pos,50%);width:2px;background:rgba(247,242,234,.9);transform:translateX(-50%);pointer-events:none}
+.resultado__alca{position:absolute;top:50%;left:50%;display:grid;place-items:center;width:46px;height:46px;border:1px solid var(--champanhe);border-radius:50%;background:var(--marfim);color:var(--espresso);box-shadow:0 3px 18px rgba(36,27,26,.25);transform:translate(-50%,-50%)}
+.resultado__alca svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;animation:resultado-seta 1.8s ease-in-out infinite}
+@keyframes resultado-seta{0%,100%{transform:translateX(-2px)}
+50%{transform:translateX(3px)}
+}
+.resultado__controle{position:absolute;z-index:4;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;touch-action:pan-y}
+.oval__media:focus-within{outline:2px solid var(--cacau);outline-offset:4px}
+.no-js .resultado__controle{display:none}
+.sobre__content{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.sobre__nome{font-size:clamp(1.75rem,7.2vw,2.75rem);line-height:1.12;letter-spacing:.005em}
+.sobre__esp{font-family:var(--serif);font-weight:500;font-size:clamp(1.125rem,4.5vw,1.375rem);line-height:1.3;color:var(--cacau)}
+.sobre__p{max-width:46ch;color:rgba(107,81,67,.92);font-size:clamp(.9375rem,3.9vw,1rem);line-height:1.7}
+.sobre__itens{display:none;align-items:center;gap:28px;margin-top:6px}
+@media (min-width:1024px){.sobre__itens{display:flex}
+}
+.sobre__item{display:flex;align-items:center;gap:10px}
+.sobre__item + .sobre__item{border-left:1px solid var(--hairline-escura);padding-left:28px}
+.sobre__item svg{width:22px;height:22px;flex:none;fill:none;stroke:var(--cacau);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.sobre__item span{font:400 .8125rem/1.3 var(--sans);letter-spacing:.02em;color:var(--cacau)}
+.sobre__link{margin-top:10px;display:inline-flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:500;font-size:1.0625rem;line-height:1.2;color:var(--espresso);text-decoration:none;border-bottom:1px solid var(--hairline-escura);padding-bottom:6px;transition:color .24s var(--ease)}
+.sobre__link svg{width:18px;height:18px;flex:none;transition:transform .2s var(--ease)}
+@media (hover:hover) and (pointer:fine){.sobre__link:hover{color:var(--cacau)}
+.sobre__link:hover svg{transform:translateX(4px)}
+}
+.possibilidades{background:var(--espresso);padding:64px 0 56px}
+@media (min-width:1024px){.possibilidades{padding:100px 0}
+}
+.possibilidades__head{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+@media (min-width:1024px){.possibilidades__head{margin-bottom:40px}
+}
+.possibilidades__titulo{color:var(--marfim);font-size:clamp(1.75rem,7.2vw,2.5rem);line-height:1.15;letter-spacing:.005em}
+.lista-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(32px,5vw,52px);max-width:620px}
+.card__media{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border-radius:18px;background:linear-gradient(150deg,#e9dfd2,#c4ae96);text-decoration:none}
+.card__media img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s var(--ease)}
+.card__placeholder{position:absolute;inset:0;display:grid;place-items:center;padding:24px;color:var(--espresso);font-size:.875rem;text-align:center}
+.card__media.has-img .card__placeholder{display:none}
+.card__legenda{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 2px 10px;border-bottom:1px solid var(--hairline-clara)}
+.card__legenda span{font-family:var(--serif);font-weight:500;font-size:1.0625rem;line-height:1.2;color:var(--marfim)}
+.card__seta{display:inline-flex;color:var(--marfim);border-radius:2px}
+.card__seta svg{width:18px;height:18px;flex:none;transition:transform .2s var(--ease)}
+.visualizador{position:fixed;inset:0;z-index:100;overflow-y:auto;overscroll-behavior:contain;background:rgba(30,22,21,.96);color:var(--marfim);padding:64px 16px max(20px,env(safe-area-inset-bottom,0px))}
+.visualizador__inner{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;width:min(100%,680px);margin:auto}
+.visualizador__fechar,.visualizador__nav{display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(247,242,234,.48);border-radius:50%;background:rgba(36,27,26,.7);color:var(--marfim);cursor:pointer}
+.visualizador__fechar{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:16px;z-index:2}
+.visualizador__fechar svg,.visualizador__nav svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.visualizador__foto{position:relative;display:grid;place-items:center;width:100%;min-height:0;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.visualizador__foto img{display:block;max-width:100%;max-height:calc(100vh - 210px);max-height:calc(100dvh - 210px);width:auto;height:auto;object-fit:contain;border-radius:12px;-webkit-user-drag:none}
+.visualizador__nav{position:absolute;top:50%;z-index:1;transform:translateY(-50%)}
+.visualizador__nav--anterior{left:8px}
+.visualizador__nav--proximo{right:8px}
+.visualizador__nome{margin-top:18px;font-size:1.5rem;line-height:1.25;text-align:center}
+.visualizador__contador{margin-top:4px;color:rgba(247,242,234,.7);font-size:.75rem}
+.visualizador__origem{margin-top:12px;color:var(--champanhe);font-size:.875rem;text-underline-offset:4px}
+.visualizador--galeria .visualizador__nome,.visualizador--galeria .visualizador__contador,.visualizador--galeria .visualizador__origem{display:none}
+.visualizador--galeria .visualizador__foto img{max-height:calc(100vh - 100px);max-height:calc(100dvh - 100px)}
+@media (hover:hover) and (pointer:fine){.visualizador__fechar:hover,.visualizador__nav:hover{background:var(--cacau)}
+}
+@media (hover:hover) and (pointer:fine){.card__media:hover img{transform:scale(1.025)}
+.card__seta:hover{color:var(--champanhe)}
+.card__seta:hover svg{transform:translateX(4px)}
+}
+.processo{background:var(--marfim);padding:0 0 64px}
+@media (min-width:1024px){.processo{padding:0}
+}
+.processo__wrap{display:flex;flex-direction:column}
+.processo__media{position:relative;overflow:hidden;aspect-ratio:2/1;min-height:200px;background:radial-gradient(140px 140px at 24% 26%,rgba(247,242,234,.5),transparent 62%),linear-gradient(150deg,#d8c8b6 0%,#b59a78 55%,#6b5143 100%)}
+.processo__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+@media (min-width:1024px){.processo__media img{object-position:50% 45%}
+}
+.processo__painel{position:relative;z-index:2;display:flex;flex-direction:column;gap:6px;background:var(--marfim);margin:-64px var(--gutter) 0;padding:28px 24px 32px}
+@media (min-width:1024px){.processo__wrap{flex-direction:row;align-items:center}
+.processo__media{order:2;flex:1 1 auto;aspect-ratio:auto;min-height:clamp(520px,41vw,640px)}
+.processo__painel{order:1;flex:0 0 560px;margin:0 -170px 0 max(var(--gutter),calc((100vw - 1200px)/2));padding:44px 40px}
+}
+.processo__titulo{font-size:clamp(1.625rem,6.5vw,2.25rem);line-height:1.18;letter-spacing:.005em}
+.passos{display:flex;flex-direction:column;margin-top:12px}
+.passo{display:flex;align-items:baseline;gap:18px;padding:13px 0;border-bottom:1px solid var(--hairline-escura)}
+.passo__num{font-family:var(--serif);font-weight:500;font-size:1.0625rem;line-height:1;color:var(--champanhe-texto);min-width:2ch}
+.passo__txt{font:400 .9375rem/1.5 var(--sans);color:rgba(36,27,26,.9)}
+.processo .btn{margin-top:22px;align-self:flex-start}
+.galeria{background:var(--marfim);padding:42px 0 64px}
+@media (min-width:1024px){.galeria{padding:96px 0}
+}
+.galeria__head{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:28px}
+.galeria__titulo{font-size:clamp(1.75rem,7.2vw,2.5rem);line-height:1.15;letter-spacing:.005em}
+.galeria__head::after{content:"";display:none;width:44px;height:1px;background:var(--champanhe);margin-top:8px}
+@media (min-width:1024px){.galeria__head{align-items:center;text-align:center;margin-bottom:40px}
+.galeria__head::after{display:block}
+}
+.galeria__mosaico{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(0,1fr);gap:8px;width:calc(100% - 24px);margin-inline:auto}
+.galeria__item{position:relative;min-width:0;min-height:0;margin:0;overflow:hidden;background:linear-gradient(160deg,#e9dfd2 0%,#cbb69e 55%,#8a6a4a 100%)}
+.galeria__item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s var(--ease)}
+.galeria__abrir{display:none;position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0;border:0;background:transparent;cursor:zoom-in}
+.js .galeria__abrir{display:block}
+.galeria__abrir:focus-visible{outline-offset:-4px}
+.g-01{grid-column:1;grid-row:1 / 3}
+.g-02{grid-column:2;grid-row:1;aspect-ratio:1122/1402}
+.g-03{grid-column:2;grid-row:2;aspect-ratio:1122/1402}
+@media (min-width:1024px){.galeria__mosaico{gap:18px;width:min(100%,720px)}
+}
+@media (hover:hover) and (pointer:fine){.galeria__item:hover img{transform:scale(1.04)}
+}
+.galeria__nota{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:24px;font-family:var(--serif);font-weight:500;font-size:1.0625rem;line-height:1.4;color:var(--espresso)}
+.galeria__nota::after{content:"";width:44px;height:1px;background:var(--champanhe)}
+@media (max-width:1023px){.galeria__head,.galeria__nota{padding-inline:20px}
+}
+@media (min-width:1024px){.galeria__nota{display:none}
+}
+.cuidados{background:var(--marfim);padding:0 0 64px}
+@media (min-width:1024px){.cuidados{padding:0}
+}
+.cuidados__wrap{display:flex;flex-direction:column}
+.cuidados__media{position:relative;overflow:hidden;aspect-ratio:2/1;min-height:200px;background:radial-gradient(140px 140px at 70% 28%,rgba(247,242,234,.45),transparent 62%),linear-gradient(200deg,#e9dfd2 0%,#cbb69e 50%,#8a6a4a 100%)}
+.cuidados__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.cuidados__painel{position:relative;z-index:2;display:flex;flex-direction:column;gap:10px;background:var(--marfim);margin:-64px var(--gutter) 0;padding:28px 24px 32px}
+@media (min-width:1024px){.cuidados__wrap{flex-direction:row;align-items:center}
+.cuidados__media{order:1;flex:1 1 auto;aspect-ratio:auto;min-height:clamp(520px,41vw,640px)}
+.cuidados__media img{object-position:40% 40%}
+.cuidados__painel{order:2;flex:0 0 620px;margin:0 max(var(--gutter),calc((100vw - 1200px)/2)) 0 -24px;padding:44px 40px}
+}
+.cuidados__titulo{font-size:clamp(1.625rem,6.5vw,2.25rem);line-height:1.18;letter-spacing:.005em}
+.cuidados__apoio{max-width:44ch;color:rgba(107,81,67,.92);font-size:clamp(.9375rem,3.9vw,1rem);line-height:1.7}
+.cuidados__lista{display:flex;flex-direction:column;margin-top:6px}
+.cuidado{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid var(--hairline-escura)}
+.cuidado svg{width:22px;height:22px;flex:none;fill:none;stroke:var(--cacau);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.cuidado span{font:400 .9375rem/1.4 var(--sans);color:rgba(36,27,26,.9)}
+.cuidados .sobre__link{margin-top:16px}
+.faq{background:var(--marfim);padding:64px 0}
+@media (min-width:1024px){.faq{padding:96px 0}
+}
+.faq__grid{display:grid;gap:32px}
+@media (min-width:1024px){.faq__grid{grid-template-columns:4fr 7fr;gap:64px;align-items:start}
+}
+.faq__head{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.faq__filete{width:44px;height:1px;background:var(--champanhe)}
+.faq__titulo{font-size:clamp(1.625rem,6.5vw,2.25rem);line-height:1.18;letter-spacing:.005em}
+.faq__lista{border-top:1px solid var(--hairline-escura)}
+.faq__item{border-bottom:1px solid var(--hairline-escura)}
+.faq__pergunta{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;background:none;border:0;cursor:pointer;text-align:left;font:400 .9375rem/1.5 var(--sans);color:var(--espresso)}
+.faq__icone{flex:none;width:18px;height:18px;transition:transform .28s var(--ease)}
+.faq__icone svg{width:18px;height:18px;display:block;stroke:var(--cacau);stroke-width:1.6;stroke-linecap:round;fill:none}
+.faq__item.is-aberta .faq__icone{transform:rotate(45deg)}
+.faq__resposta{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s var(--ease)}
+.faq__item.is-aberta .faq__resposta{grid-template-rows:1fr}
+.no-js .faq__resposta{grid-template-rows:1fr}
+.faq__resposta-inner{overflow:hidden;min-height:0}
+.faq__resposta p{padding:0 0 18px;max-width:52ch;color:rgba(107,81,67,.92);font-size:.9375rem;line-height:1.7}
+.cta-final{background:var(--espresso)}
+.cta-final__grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.cta-final__content{display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:56px 24px 56px max(var(--gutter),calc((100vw - 1200px)/2))}
+@media (min-width:1024px){.cta-final__content{padding:96px 64px 96px max(var(--gutter),calc((100vw - 1200px)/2))}
+}
+.cta-final__titulo{color:var(--marfim);font-size:clamp(1.75rem,7.5vw,2.5rem);line-height:1.16;letter-spacing:.005em}
+.cta-final__apoio{max-width:36ch;color:rgba(247,242,234,.85);font-size:clamp(.9375rem,3.9vw,1rem);line-height:1.65}
+.cta-final .btn{margin-top:8px}
+.btn__wa{width:20px;height:20px;fill:currentColor;flex:none}
+.cta-final__media{position:relative;overflow:hidden;min-height:260px;background:var(--espresso)}
+.cta-final__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% center}
+@media (min-width:1024px){.cta-final__media{min-height:100%}
+}
+img[data-img]:not([src]){display:none}
+@media (max-width:1023px){.hero__media{--hero-photo-offset:48px}
+.hero{min-height:clamp(370px,100vw,520px);padding:calc(var(--header-h) + 14px) 0 32px;align-items:flex-end}
+.hero__content{gap:10px}
+.hero .eyebrow{display:none}
+.hero__title{font-size:clamp(2rem,8.6vw,3.25rem);line-height:1.04;letter-spacing:-.02em}
+.hero__support{max-width:33ch;font-size:.9375rem;line-height:1.45}
+.hero .btn{margin-top:8px}
+.hero__overlay{background:linear-gradient(90deg,rgba(36,27,26,.78),rgba(36,27,26,.12) 100%),linear-gradient(to top,rgba(36,27,26,.82),rgba(36,27,26,.12) 85%)}
+.oval{width:min(76%,300px)}
+.sobre__grid{gap:42px}
+.sobre__content{max-width:560px;margin-inline:auto}
+.processo__media,.cuidados__media{aspect-ratio:3/2;min-height:250px}
+.processo__painel,.cuidados__painel{margin-top:-46px;box-shadow:0 12px 30px rgba(36,27,26,.06)}
+.processo__media{aspect-ratio:4/3;min-height:280px}
+.processo__painel{margin-top:-20px}
+.cta-final__grid{grid-template-columns:1fr;grid-template-rows:minmax(440px,auto)}
+.cta-final__media{grid-area:1/1;min-height:440px}
+.cta-final__media img{object-position:78% center}
+.cta-final__media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(36,27,26,.96),rgba(36,27,26,.76) 58%,rgba(36,27,26,.48))}
+.cta-final__content{grid-area:1/1;position:relative;z-index:1;justify-content:center;padding:72px var(--gutter);max-width:560px}
+.cta-final__titulo{font-size:clamp(2.125rem,9vw,3.25rem)}
+.cuidados{padding-bottom:42px}
+.faq{padding-top:48px}
+.js .cuidados__lista.reveal,.js .cuidados__painel .sobre__link.reveal{opacity:1;transform:none;transition:none}
+}
+@media (max-width:599px){.oval{width:min(calc(76% + 20px),320px)}
+.sobre__grid{gap:36px}
+.hero{height:100vh;height:100svh;min-height:0;padding:0}
+.hero__content{position:absolute;left:var(--gutter);right:var(--gutter);bottom:60px;width:auto;max-width:none;margin:0;align-items:center;text-align:center}
+.hero__title span:first-child{font-size:clamp(1.875rem,7.8vw,2.25rem)}
+.hero__title span:last-child{font-size:clamp(1.375rem,6.1vw,1.5rem)}
+.hero__scroll{position:absolute;left:50%;bottom:8px;display:grid;place-items:center;width:44px;height:40px;margin-left:-22px;color:var(--marfim);text-decoration:none}
+.hero__scroll svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;animation:hero-seta 1.8s ease-in-out infinite}
+@keyframes hero-seta{0%,100%{transform:translateY(-3px);opacity:.65}
+50%{transform:translateY(3px);opacity:1}
+}
+.js .hero .reveal{opacity:1!important;transform:none!important;transition:none!important}
+.js .hero__media img{transform:none!important;transition:none!important}
+.hero__media img{object-position:58% 0}
+.hero__overlay{background:linear-gradient(to top,rgba(36,27,26,.96) 0%,rgba(36,27,26,.62) 27%,rgba(36,27,26,.08) 67%,rgba(36,27,26,.12) 100%)}
+}
+@media (max-width:360px){.brand__img{width:138px}
+.rodape__marca .brand__img{width:138px}
+.band__item span{font-size:.68rem}
+.band__item svg{width:15px;height:15px}
+.cta-final .btn{padding-inline:16px;font-size:.8125rem}
+}
+.rodape{background:var(--espresso-escuro);border-top:1px solid var(--hairline-clara)}
+.rodape__inner{display:flex;align-items:center;flex-wrap:wrap;gap:16px 20px;padding:18px 0}
+.rodape__marca{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.rodape__marca .brand__img{width:150px;height:42px}
+.rodape__nome{font-family:var(--serif);font-weight:500;font-size:1rem;letter-spacing:.02em;color:var(--marfim)}
+.rodape__divisoria{width:1px;height:24px;background:var(--hairline-clara)}
+.rodape__social{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--marfim);font:400 .8125rem/1 var(--sans);letter-spacing:.04em;transition:color .24s var(--ease)}
+.rodape__social svg{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.6}
+@media (hover:hover) and (pointer:fine){.rodape__social:hover{color:var(--champanhe)}
+}
+.wa-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;width:56px;height:56px;border-radius:50%;background:var(--champanhe);color:var(--espresso);display:grid;place-items:center;text-decoration:none;box-shadow:0 10px 24px rgba(36,27,26,.28);transition:background-color .24s var(--ease),color .24s var(--ease),opacity .24s var(--ease),transform .24s var(--ease)}
+.wa-float{border:0;cursor:pointer}
+.wa-float::before{content:"";position:absolute;inset:-3px;border:2px solid var(--champanhe);border-radius:50%;pointer-events:none;opacity:0}
+.wa-float.is-in:not(.is-open)::before{animation:wa-pulso 2.8s ease-out infinite}
+@keyframes wa-pulso{0%{transform:scale(1);opacity:.55}75%,100%{transform:scale(1.5);opacity:0}}
+.wa-float svg{width:28px;height:28px;fill:currentColor}
+.wa-float__badge{position:absolute;top:-6px;right:-5px;display:grid;place-items:center;min-width:21px;height:21px;padding:0 4px;border:2px solid var(--espresso);border-radius:50%;background:#c83239;color:#fff;font:700 .6875rem/1 var(--sans)}
+.js .wa-float{opacity:0;transform:scale(.95);pointer-events:none}
+.js .wa-float.is-in{opacity:1;transform:scale(1);pointer-events:auto}
+.wa-chat{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:61;display:flex;flex-direction:column;width:min(350px,calc(100vw - 32px));max-height:min(440px,calc(100vh - 160px));overflow:hidden;border:1px solid rgba(247,242,234,.18);border-radius:16px;background:#eee7dc;box-shadow:0 18px 48px rgba(30,22,21,.32);font-family:var(--sans)}
+@supports (height:100svh){.wa-chat{max-height:min(440px,calc(100svh - 160px))}}
+.wa-chat__cabecalho{display:flex;align-items:center;justify-content:space-between;gap:12px;flex:none;padding:12px 14px;background:var(--espresso);color:var(--marfim)}
+.wa-chat__nome{font:500 .9375rem/1.2 var(--sans)}
+.wa-chat__status{margin-top:3px;color:var(--areia);font-size:.6875rem;line-height:1.2}
+.wa-chat__fechar{display:grid;place-items:center;flex:none;width:36px;height:36px;padding:0;border:0;border-radius:50%;background:transparent;color:var(--marfim);font:400 1.5rem/1 var(--sans);cursor:pointer}
+.wa-chat__corpo{display:flex;flex-direction:column;align-items:flex-start;gap:10px;min-height:0;overflow-y:auto;padding:16px 14px;background:linear-gradient(150deg,#f3eee7,#e9dfd2);overscroll-behavior:contain}
+.wa-chat__mensagem{max-width:94%;padding:10px 12px;border-radius:3px 12px 12px 12px;background:#fffaf2;color:var(--espresso);box-shadow:0 1px 3px rgba(36,27,26,.09);font-size:.875rem;line-height:1.45}
+.wa-chat__digitando{padding:5px 15px 8px;border-radius:3px 12px 12px 12px;background:#fffaf2;color:var(--cacau);font-size:1.25rem;line-height:1;letter-spacing:.18em;animation:wa-digitando 1s ease-in-out infinite}
+@keyframes wa-digitando{0%,100%{opacity:.45}50%{opacity:1}}
+.wa-chat__acao{flex:none;padding:12px 14px 14px;background:#eee7dc}
+.wa-chat__acao .btn{width:100%;min-height:44px;padding:12px;font-size:.8125rem}
+@media (hover:hover) and (pointer:fine){.wa-float:hover{background:var(--cacau);color:var(--marfim)}
+}
+@media (min-width:1024px){.wa-float{display:none}
+.wa-chat{display:none}
+}
+.js .reveal{opacity:0;transform:translate3d(0,12px,0);transition:opacity .7s ease,transform .8s cubic-bezier(.22,.8,.25,1);transition-delay:0s}
+.js .reveal.is-in{opacity:1;transform:translate3d(0,0,0);transition-delay:calc(var(--i,0)*45ms)}
+@media (prefers-reduced-motion:reduce){.hero__scroll svg{animation:none}
+.resultado__alca svg{animation:none}
+.wa-float::before,.wa-chat__digitando{animation:none!important}
+.btn::before,.btn::after{animation:none!important}
+.btn::after{display:none}
+.js .reveal,.menu__link,.menu .btn{opacity:1!important;transform:none!important;transition:none!important}
+.js .wa-float{transform:none!important;transition:none!important}
+.js .wa-float.is-in{opacity:1!important}
+.js .hero__media img{transform:none!important;transition:none!important}
+.btn,.btn svg,.header,.wa-float,.burger,.burger__line,.menu__close,.sobre__link,.sobre__link svg,.card__media img,.card__seta svg,.visualizador__fechar,.visualizador__nav,.galeria__item img,.faq__resposta,.faq__icone,.rodape__social{transition:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<header class="header" id="cabecalho">
+<div class="header__inner container">
+<a class="brand" href="#topo" aria-label="Vânia MegaHair — voltar ao início">
+<img class="brand__img" data-img="logo" alt="" width="160" height="43" hidden>
+<span class="brand__text" data-brand-text>Vânia MegaHair</span>
+</a>
+<nav class="nav" aria-label="Navegação principal">
+<ul class="nav__list">
+<li><a href="#possibilidades">Mega hair</a></li>
+<li><a href="#resultados">Antes e depois</a></li>
+<li><a href="#duvidas">Dúvidas</a></li>
+</ul>
+</nav>
+<a class="btn btn--sm header__cta" data-wa href="#" target="_blank" rel="noopener noreferrer">Agendar avaliação</a>
+<button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+<span class="burger__box" aria-hidden="true"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></span>
+</button>
+</div>
+</header>
+<div class="menu" id="menu-principal" hidden>
+<button class="menu__close" id="fechar-menu" type="button" aria-label="Fechar menu">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+</button>
+<a class="menu__link" href="#possibilidades">Mega hair</a>
+<a class="menu__link" href="#resultados">Antes e depois</a>
+<a class="menu__link" href="#duvidas">Dúvidas</a>
+<a class="btn" data-wa href="#" target="_blank" rel="noopener noreferrer">Agendar avaliação
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+</a>
+</div>
+<main id="conteudo">
+<section class="hero" id="topo" aria-labelledby="titulo-hero">
+<div class="hero__media">
+<picture>
+<source media="(max-width: 599px)" srcset="imagens/hero-mobile.avif" type="image/avif">
+<img data-img="hero" src="imagens/hero-desktop.avif" alt="Composição ilustrativa de Vânia segurando mechas de mega hair em um salão" width="1600" height="900" fetchpriority="high" decoding="async">
+</picture>
+</div>
+<div class="hero__overlay" aria-hidden="true"></div>
+<div class="container hero__content">
+<p class="eyebrow reveal" style="--i:0">Vânia MegaHair</p>
+<h1 class="hero__title" id="titulo-hero">
+<span class="reveal" style="--i:1">Vânia Aguiar</span>
+<span class="reveal" style="--i:2">Especialista em Mega Hair.</span>
+</h1>
+<p class="hero__support reveal" style="--i:3">Avaliação individual para entender seus fios e o visual que você deseja.</p>
+<a class="btn reveal" style="--i:4" data-wa href="#" target="_blank" rel="noopener noreferrer">Agendar minha avaliação
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+</div>
+<a class="hero__scroll" href="#destaques" aria-label="Ver mais abaixo">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 9 8 8 8-8"/></svg>
+</a>
+</section>
+<section class="band" id="destaques" aria-label="Benefícios do mega hair">
+<ul class="band__list container">
+<li class="band__item reveal" style="--i:0">
+<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 7c6-2 14-2 20 0M6 10c6-2 14-2 20 0"/><path d="M8 11c1 6 0 11-2 16M13 10c0 7-2 13-3 17M18 10c-1 7 0 13 1 17M23 10c0 7 2 13 3 17"/></svg>
+<span>Comprimento</span>
+</li>
+<li class="band__item reveal" style="--i:1">
+<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5c-4 4-5 8-4 11 1 2 2 4 4 5 2-1 3-3 4-5 1-3 0-7-4-11Z"/><path d="M12 20c-5-1-8-4-9-9 4 0 7 1 9 4M20 20c5-1 8-4 9-9-4 0-7 1-9 4M4 20c3 5 7 7 12 7s9-2 12-7c-4-1-7 0-12 3-5-3-8-4-12-3Z"/></svg>
+<span>Volume</span>
+</li>
+<li class="band__item reveal" style="--i:2">
+<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7c7-4 15-4 22 0M7 10c-1 5-2 8-1 12 0 2 0 4-1 5M13 9c-2 5-1 9 0 12 1 3 1 5 0 7M19 9c-1 5 1 8 2 12 1 3 1 5 0 7M25 10c-1 5 1 8 2 12 1 3 0 5-1 6"/></svg>
+<span>Seu jeito</span>
+</li>
+</ul>
+</section>
+<section class="sobre" id="resultados" aria-labelledby="titulo-resultados">
+<div class="container sobre__grid">
+<div class="resultado__figura reveal" style="--i:0">
+<div class="oval">
+<div class="oval__media resultado__comparador" style="--pos:50%">
+<div class="resultado__camada">
+<span class="resultado__aviso">Imagem indisponível</span>
+<img data-img="antes" alt="Simulação do cabelo antes do mega hair, com menor comprimento e densidade" width="1088" height="1445" loading="lazy" decoding="async">
+<span class="resultado__rotulo resultado__rotulo--antes" aria-hidden="true">Antes</span>
+</div>
+<div class="resultado__camada resultado__camada--depois">
+<span class="resultado__aviso">Imagem indisponível</span>
+<img data-img="depois" alt="Simulação do cabelo depois do mega hair, mais longo e volumoso" width="1088" height="1445" loading="lazy" decoding="async">
+<span class="resultado__rotulo resultado__rotulo--depois" aria-hidden="true">Depois</span>
+</div>
+<span class="resultado__divisor" aria-hidden="true">
+<span class="resultado__alca"><svg viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></span>
+</span>
+<input class="resultado__controle" type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois; arraste para os lados" aria-valuetext="50% da imagem Antes visível">
+</div>
+</div>
+</div>
+<div class="sobre__content">
+<p class="eyebrow eyebrow--claro reveal" style="--i:1">Antes e depois</p>
+<h2 class="sobre__nome reveal" style="--i:2" id="titulo-resultados">A transformação aparece nos detalhes.</h2>
+<p class="sobre__esp reveal" style="--i:3">Veja o antes e o depois lado a lado.</p>
+<p class="sobre__p reveal" style="--i:4">Compare comprimento, volume e caimento nesta simulação visual. O resultado para o seu cabelo começa com uma avaliação individual.</p>
+<ul class="sobre__itens reveal" style="--i:5">
+<li class="sobre__item">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h8v14H3zM13 5h8v14h-8zM12 3v18"/></svg>
+<span>Comparação lado a lado</span>
+</li>
+<li class="sobre__item">
+<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></svg>
+<span>Avaliação individual</span>
+</li>
+</ul>
+<a class="sobre__link reveal" style="--i:6" data-wa href="#" target="_blank" rel="noopener noreferrer">Quero minha avaliação
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+</a>
+</div>
+</div>
+</section>
+<section class="possibilidades" id="possibilidades" aria-labelledby="titulo-possibilidades">
+<div class="container possibilidades__head">
+<p class="eyebrow reveal" style="--i:0">O seu mega hair</p>
+<h2 class="possibilidades__titulo reveal" style="--i:1" id="titulo-possibilidades">Um mega hair pensado para você.</h2>
+</div>
+<ul class="lista-cards container">
+<li class="card-possibilidade reveal" style="--i:2">
+<a class="card__media" href="https://www.instagram.com/p/DQ7BKBTjeXT/?img_index=1" target="_blank" rel="noopener noreferrer" aria-label="Ver publicação original de Comprimento no Instagram">
+<span class="card__placeholder" aria-hidden="true">Imagem em preparação</span>
+<img data-img="comprimento" alt="Capa recriada: cabelo longo visto de costas, referência visual de comprimento" width="1086" height="1448" loading="lazy" decoding="async">
+</a>
+<p class="card__legenda"><span>Comprimento</span>
+<a class="card__seta" href="https://www.instagram.com/p/DQ7BKBTjeXT/?img_index=1" target="_blank" rel="noopener noreferrer" aria-label="Abrir postagem de Comprimento no Instagram">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+</a>
+</p>
+</li>
+<li class="card-possibilidade reveal" style="--i:3">
+<a class="card__media" href="https://www.instagram.com/p/DYFJYW0Jd8k/" target="_blank" rel="noopener noreferrer" aria-label="Ver publicação original de Volume no Instagram">
+<span class="card__placeholder" aria-hidden="true">Imagem em preparação</span>
+<img data-img="volume" alt="Capa recriada: cabelo escuro e volumoso visto de costas, referência visual de volume" width="1086" height="1448" loading="lazy" decoding="async">
+</a>
+<p class="card__legenda"><span>Volume</span>
+<a class="card__seta" href="https://www.instagram.com/p/DYFJYW0Jd8k/" target="_blank" rel="noopener noreferrer" aria-label="Abrir postagem de Volume no Instagram">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+</a>
+</p>
+</li>
+<li class="card-possibilidade reveal" style="--i:4">
+<a class="card__media" href="https://www.instagram.com/p/DSGgjyXjLKg/" target="_blank" rel="noopener noreferrer" aria-label="Ver publicação original de Finalização no Instagram">
+<span class="card__placeholder" aria-hidden="true">Imagem em preparação</span>
+<img data-img="acabamento" alt="Capa recriada: cabelo liso com transição de castanho para loiro visto de costas, referência visual de finalização" width="1086" height="1448" loading="lazy" decoding="async">
+</a>
+<p class="card__legenda"><span>Finalização</span>
+<a class="card__seta" href="https://www.instagram.com/p/DSGgjyXjLKg/" target="_blank" rel="noopener noreferrer" aria-label="Abrir postagem de Finalização no Instagram">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+</a>
+</p>
+</li>
+</ul>
+</section>
+<div class="visualizador" id="visualizador" role="dialog" aria-modal="true" aria-labelledby="visualizador-nome" hidden>
+<div class="visualizador__inner">
+<button class="visualizador__fechar" type="button" aria-label="Fechar imagem ampliada">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+</button>
+<div class="visualizador__foto">
+<button class="visualizador__nav visualizador__nav--anterior" type="button" aria-label="Resultado anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+<img id="visualizador-imagem" alt="" draggable="false">
+<button class="visualizador__nav visualizador__nav--proximo" type="button" aria-label="Próximo resultado"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+<h2 class="visualizador__nome" id="visualizador-nome"></h2>
+<p class="visualizador__contador" aria-live="polite"></p>
+<a class="visualizador__origem" href="#" target="_blank" rel="noopener noreferrer">Ver publicação original no Instagram</a>
+</div>
+</div>
+<section class="processo" aria-labelledby="titulo-processo">
+<div class="processo__wrap">
+<div class="processo__media reveal" style="--i:0">
+<img data-img="processo" alt="Mão com pulseira dourada segurando duas mechas loiras de mega hair sobre tecido escuro" width="1536" height="1024" loading="lazy" decoding="async">
+</div>
+<div class="processo__painel">
+<p class="eyebrow eyebrow--claro reveal" style="--i:1">Como funciona</p>
+<h2 class="processo__titulo reveal" style="--i:2" id="titulo-processo">Seu próximo passo,<br>com confiança.</h2>
+<ol class="passos reveal" style="--i:3">
+<li class="passo"><span class="passo__num">01</span><span class="passo__txt">Compartilhe o que você deseja</span></li>
+<li class="passo"><span class="passo__num">02</span><span class="passo__txt">Converse sobre seus fios</span></li>
+<li class="passo"><span class="passo__num">03</span><span class="passo__txt">Receba uma proposta para você</span></li>
+</ol>
+<a class="btn reveal" style="--i:4" data-wa href="#" target="_blank" rel="noopener noreferrer">Agendar avaliação
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+</a>
+</div>
+</div>
+</section>
+<section class="galeria" aria-labelledby="titulo-galeria">
+<div class="container">
+<div class="galeria__head reveal" style="--i:0">
+<p class="eyebrow eyebrow--claro">Inspire-se</p>
+<h2 class="galeria__titulo" id="titulo-galeria">Comprimento, volume e movimento.</h2>
+</div>
+<div class="galeria__mosaico">
+<figure class="galeria__item g-01 reveal" style="--i:1">
+<img data-img="galeria-01" alt="Inspiração: cabelo acobreado liso visto de costas diante de plantas" width="1122" height="1402" loading="lazy" decoding="async">
+<button class="galeria__abrir" type="button" aria-label="Ampliar primeira foto da galeria Inspire-se"></button>
+</figure>
+<figure class="galeria__item g-02 reveal" style="--i:2">
+<img data-img="galeria-02" alt="Inspiração: cabelo liso com raízes castanhas e comprimento loiro visto de costas" width="1122" height="1402" loading="lazy" decoding="async">
+<button class="galeria__abrir" type="button" aria-label="Ampliar segunda foto da galeria Inspire-se"></button>
+</figure>
+<figure class="galeria__item g-03 reveal" style="--i:3">
+<img data-img="galeria-03" alt="Inspiração: cabelo longo com ondas caramelo visto de costas no salão" width="1122" height="1402" loading="lazy" decoding="async">
+<button class="galeria__abrir" type="button" aria-label="Ampliar terceira foto da galeria Inspire-se"></button>
+</figure>
+</div>
+<p class="galeria__nota reveal" style="--i:5">Explore cada visual em detalhe.</p>
+</div>
+</section>
+<section class="cuidados" aria-labelledby="titulo-cuidados">
+<div class="cuidados__wrap">
+<div class="cuidados__media reveal" style="--i:0">
+<img data-img="manutencao" alt="Mãos apoiando cabelo longo e escovando as pontas com escova de madeira" width="1536" height="1024" loading="lazy" decoding="async">
+</div>
+<div class="cuidados__painel">
+<p class="eyebrow eyebrow--claro reveal" style="--i:1">Cuidados e manutenção</p>
+<h2 class="cuidados__titulo reveal" style="--i:2" id="titulo-cuidados">O cuidado continua<br>depois do salão.</h2>
+<p class="cuidados__apoio reveal" style="--i:3">Entenda os cuidados em casa e quando fazer a manutenção indicada para o seu caso.</p>
+<ul class="cuidados__lista reveal" style="--i:4">
+<li class="cuidado">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4"/><path d="M12 3v3"/><path d="M9 8a3 3 0 0 1 3-2h0a3 3 0 0 1 3 2v11a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/><path d="M9 12h6"/></svg>
+<span>Cuidados em casa</span>
+</li>
+<li class="cuidado">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.6-7-9.2A4 4 0 0 1 12 8a4 4 0 0 1 7 2.8C19 15.4 12 20 12 20z"/></svg>
+<span>Orientações para sua rotina</span>
+</li>
+<li class="cuidado">
+<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="6" width="16" height="14" rx="1.5"/><path d="M4 10h16"/><path d="M9 4v4M15 4v4"/><path d="M9 14h4"/></svg>
+<span>Manutenção planejada</span>
+</li>
+</ul>
+<a class="sobre__link reveal" style="--i:5" href="#duvidas">Tirar minhas dúvidas
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+</a>
+</div>
+</div>
+</section>
+<section class="faq" id="duvidas" aria-labelledby="titulo-faq">
+<div class="container faq__grid">
+<div class="faq__head reveal" style="--i:0">
+<span class="faq__filete" aria-hidden="true"></span>
+<h2 class="faq__titulo" id="titulo-faq">Antes de dar<br>o próximo passo</h2>
+</div>
+<div class="faq__lista reveal" style="--i:1">
+<div class="faq__item">
+<button class="faq__pergunta" type="button" id="faq-b1" aria-expanded="false" aria-controls="faq-r1">
+<span>Qual técnica é indicada para mim?</span>
+<span class="faq__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+</button>
+<div class="faq__resposta" id="faq-r1" role="region" aria-labelledby="faq-b1">
+<div class="faq__resposta-inner">
+<p>A escolha depende dos seus fios, do comprimento e do volume desejados. A avaliação ajuda a entender qual técnica faz sentido para o seu caso.</p>
+</div>
+</div>
+</div>
+<div class="faq__item">
+<button class="faq__pergunta" type="button" id="faq-b2" aria-expanded="false" aria-controls="faq-r2">
+<span>Quanto custa colocar mega hair?</span>
+<span class="faq__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+</button>
+<div class="faq__resposta" id="faq-r2" role="region" aria-labelledby="faq-b2">
+<div class="faq__resposta-inner">
+<p>O valor varia conforme a técnica, o comprimento, o volume e os seus fios. Depois da avaliação, você recebe uma proposta para o seu caso.</p>
+</div>
+</div>
+</div>
+<div class="faq__item">
+<button class="faq__pergunta" type="button" id="faq-b3" aria-expanded="false" aria-controls="faq-r3">
+<span>Como funciona a manutenção?</span>
+<span class="faq__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+</button>
+<div class="faq__resposta" id="faq-r3" role="region" aria-labelledby="faq-b3">
+<div class="faq__resposta-inner">
+<p>A frequência varia conforme a técnica e os seus fios. Na avaliação, pergunte sobre os cuidados em casa e o intervalo indicado para a manutenção.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="cta-final" aria-labelledby="titulo-cta-final">
+<div class="cta-final__grid">
+<div class="cta-final__content">
+<p class="eyebrow reveal" style="--i:0">Vamos conversar</p>
+<h2 class="cta-final__titulo reveal" style="--i:1" id="titulo-cta-final">O cabelo que você deseja começa com uma avaliação.</h2>
+<p class="cta-final__apoio reveal" style="--i:2">Conte o que você busca e descubra quais possibilidades fazem sentido para seus fios.</p>
+<a class="btn reveal" style="--i:3" data-wa href="#" target="_blank" rel="noopener noreferrer">
+<svg class="btn__wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+Agendar pelo WhatsApp
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+</a>
+</div>
+<div class="cta-final__media reveal" style="--i:2">
+<img data-img="cta-final" alt="" width="2048" height="1536" loading="lazy" decoding="async">
+</div>
+</div>
+</section>
+</main>
+<footer class="rodape">
+<div class="container rodape__inner">
+<a class="rodape__marca" href="#topo" aria-label="Vânia MegaHair — voltar ao início">
+<img class="brand__img" data-img="logo" alt="" width="150" height="40" hidden>
+<span class="rodape__nome" data-brand-text>Vânia MegaHair</span>
+</a>
+<span class="rodape__divisoria" aria-hidden="true"></span>
+<a class="rodape__social" href="https://www.instagram.com/vaniamegahair/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Vânia MegaHair: @vaniamegahair">
+<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+<span>@vaniamegahair</span>
+</a>
+</div>
+</footer>
+<div class="wa-chat" id="wa-chat" role="dialog" aria-label="Prévia da conversa com Vânia" hidden>
+<div class="wa-chat__cabecalho">
+<div><p class="wa-chat__nome">Vânia MegaHair</p><p class="wa-chat__status">Prévia da conversa</p></div>
+<button class="wa-chat__fechar" type="button" aria-label="Fechar conversa">×</button>
+</div>
+<div class="wa-chat__corpo" aria-live="polite" aria-relevant="additions text">
+<p class="wa-chat__mensagem" hidden>Olá! Que bom ter você por aqui. ✨</p>
+<p class="wa-chat__mensagem" hidden>Você busca mais comprimento, volume ou os dois? A avaliação começa entendendo seus fios e o visual que deseja.</p>
+<p class="wa-chat__mensagem" hidden>Se quiser, me conte o que você imagina. Podemos começar sua avaliação pelo WhatsApp.</p>
+<span class="wa-chat__digitando" role="status" aria-label="Preparando a próxima mensagem" hidden>...</span>
+</div>
+<div class="wa-chat__acao" hidden><a class="btn" data-wa href="#" target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp</a></div>
+</div>
+<button class="wa-float" id="wa-flutuante" type="button" tabindex="-1" aria-hidden="true" aria-label="Abrir prévia da conversa com Vânia, 3 mensagens" aria-controls="wa-chat" aria-expanded="false">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+<span class="wa-float__badge" aria-hidden="true">3</span>
+</button>
+<script>
+(function(){
+"use strict";
+var raiz = document.documentElement;
+raiz.classList.remove('no-js'); raiz.classList.add('js');
+var IMG_MAP = {
+logo:        { src:'imagens/logo.avif', alt:'Vânia MegaHair' },
+hero:        { src:'imagens/hero-desktop.avif', alt:'' },
+antes:       { src:'imagens/antes.avif', alt:'' },
+depois:      { src:'imagens/depois.avif', alt:'' },
+comprimento: { src:'imagens/comprimento.avif', alt:'' },
+volume:      { src:'imagens/volume.avif', alt:'' },
+acabamento:  { src:'imagens/finalizacao.avif', alt:'' },
+processo:{ src:'imagens/como-funciona.avif', alt:'' },
+'galeria-01':{ src:'imagens/inspire1.avif', alt:'' },
+'galeria-02':{ src:'imagens/inspire2.avif', alt:'' },
+'galeria-03':{ src:'imagens/inspire3.avif', alt:'' },
+manutencao:  { src:'imagens/cuidado.avif', alt:'' }, 'cta-final':{ src:'imagens/cta-bg.avif', alt:'' }
+};
+var WA_URL = 'https://wa.me/5511951614842?text=' + encodeURIComponent('Olá, Vânia! Quero minha avaliação de mega hair.');
+document.querySelectorAll('a[data-wa]').forEach(function(a){ a.href = WA_URL; });
+document.querySelectorAll('[data-img]').forEach(function(img){
+var chave = img.getAttribute('data-img');
+var entrada = IMG_MAP[chave];
+if(!entrada || !entrada.src){ return; }
+if(entrada.alt){ img.alt = entrada.alt; }
+if(chave === 'hero'){ img.setAttribute('fetchpriority','high'); }
+function imagemCarregada(){
+var suporte = chave === 'hero' ? img.closest('.hero__media') : img.parentElement;
+if(suporte){ suporte.classList.add('has-img'); }
+if(chave === 'logo'){
+var texto = img.parentElement && img.parentElement.querySelector('[data-brand-text]');
+if(texto){ texto.hidden = true; }
+}
+}
+img.addEventListener('load', imagemCarregada, { once:true });
+img.addEventListener('error', function(){ img.remove(); }, { once:true });
+if(!img.hasAttribute('src')){ img.src = entrada.src; }
+img.hidden = false;
+if(img.complete && img.hasAttribute('src')){
+if(img.naturalWidth){ imagemCarregada(); }
+else { img.remove(); }
+}
+});
+var visualizador = document.getElementById('visualizador');
+var capas = Array.prototype.slice.call(document.querySelectorAll('.card-possibilidade'));
+var fotosGaleria = Array.prototype.slice.call(document.querySelectorAll('.galeria__item'));
+var fotoAmpliada = document.getElementById('visualizador-imagem');
+var nomeAmpliado = document.getElementById('visualizador-nome');
+var contadorAmpliado = visualizador.querySelector('.visualizador__contador');
+var origemAmpliada = visualizador.querySelector('.visualizador__origem');
+var fecharVisualizador = visualizador.querySelector('.visualizador__fechar');
+var fotoArea = visualizador.querySelector('.visualizador__foto');
+var indiceAberto = 0, itensAbertos = capas, modoGaleria = false, abertura = null, overflowAnterior = '', overflowHtmlAnterior = '';
+function mostrarCapa(indice){
+indiceAberto = (indice + itensAbertos.length) % itensAbertos.length;
+var card = itensAbertos[indiceAberto];
+var imagem = card.querySelector('img[data-img]');
+fotoAmpliada.src = imagem.getAttribute('src');
+fotoAmpliada.alt = imagem.alt;
+if(!modoGaleria){
+nomeAmpliado.textContent = card.querySelector('.card__legenda span').textContent;
+contadorAmpliado.textContent = (indiceAberto + 1) + ' / ' + itensAbertos.length;
+origemAmpliada.href = card.querySelector('.card__media').href;
+} else {
+nomeAmpliado.textContent = '';
+contadorAmpliado.textContent = '';
+origemAmpliada.removeAttribute('href');
+}
+}
+function abrirVisualizador(indice, acionador, galeria){
+abertura = acionador;
+modoGaleria = !!galeria;
+itensAbertos = modoGaleria ? fotosGaleria : capas;
+visualizador.classList.toggle('visualizador--galeria', modoGaleria);
+if(modoGaleria){
+visualizador.removeAttribute('aria-labelledby');
+visualizador.setAttribute('aria-label', 'Galeria Inspire-se');
+} else {
+visualizador.removeAttribute('aria-label');
+visualizador.setAttribute('aria-labelledby', 'visualizador-nome');
+}
+overflowAnterior = document.body.style.overflow;
+overflowHtmlAnterior = document.documentElement.style.overflow;
+mostrarCapa(indice);
+visualizador.hidden = false;
+document.body.style.overflow = 'hidden';
+document.documentElement.style.overflow = 'hidden';
+fecharVisualizador.focus();
+}
+function encerrarVisualizador(){
+if(visualizador.hidden){ return; }
+visualizador.hidden = true;
+fotoAmpliada.removeAttribute('src');
+document.body.style.overflow = overflowAnterior;
+document.documentElement.style.overflow = overflowHtmlAnterior;
+if(abertura && abertura.isConnected){ abertura.focus(); }
+abertura = null;
+}
+capas.forEach(function(card, indice){
+var link = card.querySelector('.card__media');
+link.setAttribute('aria-label', 'Ampliar imagem de ' + card.querySelector('.card__legenda span').textContent);
+link.addEventListener('click', function(evento){
+if(evento.metaKey || evento.ctrlKey || evento.shiftKey || evento.altKey || evento.button !== 0){ return; }
+var imagem = card.querySelector('img[data-img]');
+if(!imagem || !imagem.getAttribute('src')){ return; }
+evento.preventDefault();
+abrirVisualizador(indice, link);
+});
+});
+fotosGaleria.forEach(function(item, indice){
+var botao = item.querySelector('.galeria__abrir');
+botao.addEventListener('click', function(){
+var imagem = item.querySelector('img[data-img]');
+if(imagem && imagem.getAttribute('src')){ abrirVisualizador(indice, botao, true); }
+});
+});
+fecharVisualizador.addEventListener('click', encerrarVisualizador);
+visualizador.querySelector('.visualizador__nav--anterior').addEventListener('click', function(){ mostrarCapa(indiceAberto - 1); });
+visualizador.querySelector('.visualizador__nav--proximo').addEventListener('click', function(){ mostrarCapa(indiceAberto + 1); });
+visualizador.addEventListener('click', function(evento){ if(evento.target === visualizador){ encerrarVisualizador(); } });
+visualizador.addEventListener('keydown', function(evento){
+if(evento.key === 'Escape'){ evento.preventDefault(); encerrarVisualizador(); return; }
+if(evento.key === 'ArrowLeft'){ evento.preventDefault(); mostrarCapa(indiceAberto - 1); return; }
+if(evento.key === 'ArrowRight'){ evento.preventDefault(); mostrarCapa(indiceAberto + 1); return; }
+if(evento.key !== 'Tab'){ return; }
+var focaveisModal = Array.prototype.slice.call(visualizador.querySelectorAll('button, a[href]')).filter(function(el){ return el.getClientRects().length > 0; });
+var primeiro = focaveisModal[0], ultimo = focaveisModal[focaveisModal.length - 1];
+if(evento.shiftKey && document.activeElement === primeiro){ evento.preventDefault(); ultimo.focus(); }
+else if(!evento.shiftKey && document.activeElement === ultimo){ evento.preventDefault(); primeiro.focus(); }
+});
+var inicioGesto = null;
+fotoArea.addEventListener('pointerdown', function(evento){
+if(evento.target.closest('button')){ return; }
+inicioGesto = { x:evento.clientX, y:evento.clientY, id:evento.pointerId };
+fotoArea.setPointerCapture(evento.pointerId);
+});
+fotoArea.addEventListener('pointerup', function(evento){
+if(!inicioGesto || inicioGesto.id !== evento.pointerId){ return; }
+var deltaX = evento.clientX - inicioGesto.x;
+var deltaY = evento.clientY - inicioGesto.y;
+inicioGesto = null;
+if(Math.abs(deltaX) > 45 && Math.abs(deltaX) > Math.abs(deltaY) * 1.2){
+mostrarCapa(indiceAberto + (deltaX < 0 ? 1 : -1));
+}
+});
+fotoArea.addEventListener('pointercancel', function(){ inicioGesto = null; });
+var comparador = document.querySelector('.resultado__comparador');
+if(comparador){
+var controle = comparador.querySelector('.resultado__controle');
+var arrastando = false;
+function atualizarComparacao(valor){
+var porcentagem = Math.max(0, Math.min(100, Math.round(Number(valor) || 0)));
+controle.value = porcentagem;
+comparador.style.setProperty('--pos', porcentagem + '%');
+controle.setAttribute('aria-valuetext', porcentagem + '% da imagem Antes visível');
+}
+function atualizarPeloPonteiro(evento){
+var caixa = comparador.getBoundingClientRect();
+if(caixa.width){ atualizarComparacao((evento.clientX - caixa.left) / caixa.width * 100); }
+}
+controle.addEventListener('input', function(){ atualizarComparacao(controle.value); });
+controle.addEventListener('pointerdown', function(evento){
+arrastando = true;
+controle.setPointerCapture(evento.pointerId);
+atualizarPeloPonteiro(evento);
+});
+controle.addEventListener('pointermove', function(evento){
+if(arrastando){ atualizarPeloPonteiro(evento); }
+});
+['pointerup','pointercancel','lostpointercapture'].forEach(function(tipo){
+controle.addEventListener(tipo, function(){ arrastando = false; });
+});
+}
+var hdr = document.getElementById('cabecalho');
+function aoRolar(){ hdr.classList.toggle('is-scrolled', window.scrollY > 16); }
+window.addEventListener('scroll', aoRolar, { passive:true });
+aoRolar();
+var burgerBtn = document.getElementById('burger');
+var menuPainel = document.getElementById('menu-principal');
+var fecharBtn = document.getElementById('fechar-menu');
+var temporizadorMenu = null;
+function focaveis(){
+return Array.prototype.slice.call(menuPainel.querySelectorAll('a[href], button:not([disabled])'));
+}
+function abrirMenu(){
+window.clearTimeout(temporizadorMenu);
+menuPainel.hidden = false;
+requestAnimationFrame(function(){ menuPainel.classList.add('is-open'); });
+burgerBtn.classList.add('is-open');
+burgerBtn.setAttribute('aria-expanded','true');
+burgerBtn.setAttribute('aria-label','Fechar menu');
+document.body.style.overflow = 'hidden';
+fecharBtn.focus();
+}
+function fecharMenu(devolverFoco){
+menuPainel.classList.remove('is-open');
+burgerBtn.classList.remove('is-open');
+burgerBtn.setAttribute('aria-expanded','false');
+burgerBtn.setAttribute('aria-label','Abrir menu');
+document.body.style.overflow = '';
+temporizadorMenu = window.setTimeout(function(){ menuPainel.hidden = true; }, 260);
+if(devolverFoco){ burgerBtn.focus(); }
+}
+burgerBtn.addEventListener('click', function(){
+if(burgerBtn.getAttribute('aria-expanded') === 'true'){ fecharMenu(true); } else { abrirMenu(); }
+});
+fecharBtn.addEventListener('click', function(){ fecharMenu(true); });
+menuPainel.addEventListener('click', function(ev){
+if(ev.target === menuPainel){ fecharMenu(true); }
+});
+menuPainel.addEventListener('keydown', function(ev){
+if(ev.key === 'Escape'){ fecharMenu(true); return; }
+if(ev.key !== 'Tab'){ return; }
+var lista = focaveis();
+if(!lista.length){ return; }
+var primeiro = lista[0], ultimo = lista[lista.length - 1];
+if(ev.shiftKey && document.activeElement === primeiro){ ev.preventDefault(); ultimo.focus(); }
+else if(!ev.shiftKey && document.activeElement === ultimo){ ev.preventDefault(); primeiro.focus(); }
+});
+document.addEventListener('keydown', function(ev){
+if(ev.key === 'Escape' && !menuPainel.hidden){ fecharMenu(true); }
+});
+document.addEventListener('click', function(ev){
+var ancora = ev.target.closest ? ev.target.closest('a[href^="#"]') : null;
+if(!ancora){ return; }
+var id = ancora.getAttribute('href');
+if(id && id.length > 1 && !document.querySelector(id)){ ev.preventDefault(); }
+if(!menuPainel.hidden){ fecharMenu(false); }
+});
+document.querySelectorAll('.faq__item').forEach(function(item){
+var botao = item.querySelector('.faq__pergunta');
+if(!botao){ return; }
+botao.addEventListener('click', function(){
+var aberta = item.classList.toggle('is-aberta');
+botao.setAttribute('aria-expanded', aberta ? 'true' : 'false');
+});
+});
+var revelaveis = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+var heroSecao = document.querySelector('.hero');
+var flutuante = document.getElementById('wa-flutuante');
+var rodape = document.querySelector('.rodape');
+var conversa = document.getElementById('wa-chat');
+var mensagensConversa = Array.prototype.slice.call(conversa.querySelectorAll('.wa-chat__mensagem'));
+var corpoConversa = conversa.querySelector('.wa-chat__corpo');
+var digitando = conversa.querySelector('.wa-chat__digitando');
+var acaoConversa = conversa.querySelector('.wa-chat__acao');
+var badgeConversa = flutuante.querySelector('.wa-float__badge');
+var temporizadorConversa = null, conversaConcluida = false;
+function rolarConversa(){ corpoConversa.scrollTop = corpoConversa.scrollHeight; }
+function mostrarMensagemConversa(indice){
+digitando.hidden = true;
+mensagensConversa[indice].hidden = false;
+rolarConversa();
+if(indice === mensagensConversa.length - 1){
+conversaConcluida = true;
+acaoConversa.hidden = false;
+rolarConversa();
+return;
+}
+digitando.hidden = false;
+rolarConversa();
+temporizadorConversa = window.setTimeout(function(){ mostrarMensagemConversa(indice + 1); }, 1000);
+}
+function fecharConversa(devolverFoco){
+if(conversa.hidden){ return; }
+window.clearTimeout(temporizadorConversa);
+temporizadorConversa = null;
+digitando.hidden = true;
+conversa.hidden = true;
+flutuante.classList.remove('is-open');
+flutuante.setAttribute('aria-expanded','false');
+flutuante.setAttribute('aria-label','Abrir prévia da conversa com Vânia');
+if(devolverFoco && flutuante.classList.contains('is-in')){ flutuante.focus(); }
+}
+function abrirConversa(){
+conversa.hidden = false;
+flutuante.classList.add('is-open');
+flutuante.setAttribute('aria-expanded','true');
+flutuante.setAttribute('aria-label','Fechar prévia da conversa com Vânia');
+badgeConversa.hidden = true;
+mensagensConversa.forEach(function(msg){ msg.hidden = true; });
+acaoConversa.hidden = true;
+if(conversaConcluida){
+mensagensConversa.forEach(function(msg){ msg.hidden = false; });
+acaoConversa.hidden = false;
+rolarConversa();
+} else { mostrarMensagemConversa(0); }
+conversa.querySelector('.wa-chat__fechar').focus();
+}
+flutuante.addEventListener('click', function(){
+if(conversa.hidden){ abrirConversa(); } else { fecharConversa(true); }
+});
+conversa.querySelector('.wa-chat__fechar').addEventListener('click', function(){ fecharConversa(true); });
+document.addEventListener('keydown', function(ev){
+if(ev.key === 'Escape' && !conversa.hidden){ ev.preventDefault(); fecharConversa(true); }
+});
+document.addEventListener('click', function(ev){
+if(!conversa.hidden && !conversa.contains(ev.target) && !flutuante.contains(ev.target)){ fecharConversa(false); }
+});
+var larguraMedida = window.innerWidth;
+function fixarAlturaHero(){
+if(!heroSecao){ return; }
+if(window.matchMedia('(max-width: 599px)').matches){
+var alturaVisual = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+var altura = Math.floor(Math.min(window.innerHeight, alturaVisual));
+if(altura > 0){ heroSecao.style.height = altura + 'px'; }
+} else {
+heroSecao.style.height = '';
+}
+}
+fixarAlturaHero();
+window.addEventListener('resize', function(){
+if(Math.abs(window.innerWidth - larguraMedida) > 64){
+larguraMedida = window.innerWidth;
+window.setTimeout(fixarAlturaHero, 250);
+}
+}, { passive:true });
+function mostrar(el){ el.classList.add('is-in'); }
+function atualizarFlutuante(){
+if(!flutuante){ return; }
+var heroTerminou = !heroSecao || heroSecao.getBoundingClientRect().bottom <= 0;
+var rodapeAtingiuBotao = rodape && rodape.getBoundingClientRect().top <= flutuante.getBoundingClientRect().bottom + 8;
+var visivel = heroTerminou && !rodapeAtingiuBotao;
+flutuante.classList.toggle('is-in', visivel);
+flutuante.tabIndex = visivel ? 0 : -1;
+flutuante.setAttribute('aria-hidden', visivel ? 'false' : 'true');
+if(!visivel){ fecharConversa(false); }
+}
+window.addEventListener('scroll', atualizarFlutuante, { passive:true });
+window.addEventListener('resize', atualizarFlutuante);
+atualizarFlutuante();
+function entradaHero(){
+revelaveis.forEach(function(el){
+if(heroSecao && heroSecao.contains(el)){ mostrar(el); }
+});
+if(heroSecao){ heroSecao.classList.add('is-loaded'); }
+}
+var foraDoHero = revelaveis.filter(function(el){ return !(heroSecao && heroSecao.contains(el)); });
+if('IntersectionObserver' in window && foraDoHero.length){
+var observador = new IntersectionObserver(function(entradas){
+entradas.forEach(function(reg){
+reg.target.classList.toggle('is-in', reg.isIntersecting);
+});
+}, { threshold: 0, rootMargin: '-6% 0px -8% 0px' });
+foraDoHero.forEach(function(el){ observador.observe(el); });
+} else {
+foraDoHero.forEach(mostrar);
+}
+if(document.readyState === 'complete'){ entradaHero(); }
+else { window.addEventListener('load', entradaHero); }
+})();
+</script>
+</body>
+</html>

@@ -32,10 +32,16 @@ a{color:inherit}
 .skip:focus{left:12px;top:12px}
 .btn{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--champanhe);color:var(--espresso);border:0;border-radius:2px;padding:15px 28px;min-height:48px;font:500 .9375rem/1 var(--sans);letter-spacing:.02em;text-decoration:none;cursor:pointer;transition:background-color .24s var(--ease),color .24s var(--ease)}
 .btn::before,.btn::after{content:"";position:absolute;z-index:-1;pointer-events:none}
-.btn::before{inset:0 auto 0 -100%;width:250%;background:linear-gradient(105deg,#a98b68,#b99d79 32%,#c7ad89 52%,#b79b77 72%,#a98b68);animation:btn-degrade 10s ease-in-out infinite alternate}
-.btn::after{top:-20%;bottom:-20%;left:0;width:36%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);transform:translateX(-160%) skewX(-17deg);animation:btn-flare 8s ease-in-out infinite}
-@keyframes btn-degrade{from{transform:translateX(0)}to{transform:translateX(35%)}}
-@keyframes btn-flare{0%,18%{transform:translateX(-160%) skewX(-17deg);opacity:0}23%{opacity:.65}42%,100%{transform:translateX(420%) skewX(-17deg);opacity:0}}
+.btn::before{inset:0 auto 0 -100%;width:250%;background:linear-gradient(105deg,#a98b68,#b99d79 32%,#c7ad89 52%,#b79b77 72%,#a98b68);animation:btn-degrade 11s ease-in-out infinite}
+.btn::after{top:-20%;bottom:-20%;left:0;width:32%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.13),transparent);transform:translateX(-160%) skewX(-17deg);animation:btn-flare 11.5s ease-in-out infinite}
+@keyframes btn-degrade{0%,100%{transform:translate3d(0,0,0) skewX(0)}28%{transform:translate3d(12%,1px,0) skewX(-1deg)}56%{transform:translate3d(32%,-1px,0) skewX(1deg)}82%{transform:translate3d(15%,1px,0) skewX(-.5deg)}}
+@keyframes btn-flare{0%,30%{transform:translateX(-160%) skewX(-17deg);opacity:0}35%{opacity:.45}51%,100%{transform:translateX(420%) skewX(-17deg);opacity:0}}
+@keyframes cta-balanco{0%,100%{transform:translate3d(0,0,0)}25%{transform:translate3d(0,1.5px,0)}75%{transform:translate3d(0,-1.5px,0)}}
+.header__cta,.wa-chat:not([hidden]) .btn{animation:cta-balanco 6.4s ease-in-out infinite}
+.menu.is-open .btn{animation:cta-balanco 6.4s ease-in-out .65s infinite}
+.js .btn.reveal.is-in,.js .cta--outline.reveal.is-in{animation:cta-balanco 6.4s ease-in-out .85s infinite}
+.btn:active,.cta--outline:active{animation:none}
+.js .btn.reveal.is-in:active,.js .cta--outline.reveal.is-in:active,.menu.is-open .btn:active,.wa-chat:not([hidden]) .btn:active{animation:none;transform:scale(.985)}
 .btn svg{width:18px;height:18px;flex:none;transition:transform .2s var(--ease)}
 @media (hover:hover) and (pointer:fine){.btn:hover{background:var(--cacau);color:var(--marfim)}
 .btn:hover::before{background:linear-gradient(105deg,#5e483e,#6b5143 32%,#806250 52%,#6b5143 72%,#5e483e)}
@@ -79,6 +85,9 @@ a{color:inherit}
 }
 @media (max-width:1023px){.header .brand__img{transform:translateY(-3px)}}
 .menu{position:fixed;inset:0;z-index:80;background:var(--menu-vidro);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);display:flex;flex-direction:column;justify-content:center;padding:calc(var(--header-h) + 12px) var(--gutter) 40px}
+.menu__brand{position:absolute;top:0;left:var(--gutter);display:inline-flex;align-items:center;gap:10px;height:var(--header-h);max-width:calc(100vw - 2*var(--gutter) - 60px);text-decoration:none;opacity:0;transform:translate3d(0,10px,0);transition:opacity .22s ease,transform .22s var(--ease)}
+.menu__brand .brand__img{transform:translateY(-3px)}
+.menu.is-open .menu__brand{opacity:1;transform:none;transition-duration:.42s;transition-delay:.06s}
 .menu__close{position:absolute;top:calc((var(--header-h) - 44px)/2);right:var(--gutter);width:44px;height:44px;display:grid;place-items:center;background:rgba(247,242,234,.05);border:1px solid rgba(247,242,234,.18);border-radius:11px;color:var(--marfim);cursor:pointer;transition:background-color .24s var(--ease),border-color .24s var(--ease)}
 .menu__close svg{width:22px;height:22px}
 .menu__link{display:block;padding:14px 2px;border-bottom:1px solid var(--hairline-clara);color:var(--marfim);text-decoration:none;font-family:var(--serif);font-size:1.75rem;line-height:1.2}
@@ -177,6 +186,23 @@ a{color:inherit}
 @media (hover:hover) and (pointer:fine){.sobre__link:hover{color:var(--cacau)}
 .sobre__link:hover svg{transform:translateX(4px)}
 }
+.vania{position:relative;isolation:isolate;overflow:hidden;background:var(--marfim);border-top:1px solid rgba(181,154,120,.24)}
+.vania__media{display:block;position:relative;aspect-ratio:2/3;overflow:hidden;background:linear-gradient(135deg,var(--cacau),var(--espresso))}
+.vania__media::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(36,27,26,.13) 0%,rgba(36,27,26,.13) 76%,rgba(247,242,234,.36) 92%,var(--marfim) 100%)}
+.vania__media picture,.vania__media img{display:block;width:100%;height:100%}
+.vania__media img{object-fit:cover;object-position:center 42%}
+.vania__grid{position:relative;z-index:2;display:grid;gap:22px;padding-block:42px 52px}
+.vania__titulo{max-width:14ch;font-size:clamp(1.75rem,7.2vw,2.625rem);line-height:1.14;letter-spacing:.005em}
+.vania__frase{position:relative;display:inline-block;white-space:nowrap}
+.vania__fio{display:none}
+.vania__texto{max-width:58ch;color:var(--cacau);font-size:.9375rem;line-height:1.7}
+.vania__experiencia{display:inline-block;margin-top:4px;border-top:1px solid var(--champanhe);padding-top:10px;color:var(--espresso);font:500 .875rem/1.5 var(--sans)}
+@media (max-width:599px){.vania__media{aspect-ratio:25/32;background:var(--marfim)}.vania__media picture{position:absolute;inset:0;width:100%;height:100%}.vania__media img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(.92)}.vania__media::after{background:linear-gradient(180deg,rgba(36,27,26,.08) 0%,rgba(36,27,26,.08) 75%,rgba(247,242,234,.12) 85%,rgba(247,242,234,.4) 93%,rgba(247,242,234,.76) 98%,var(--marfim) 100%)}.vania__grid{padding-top:24px}}
+@media (max-width:599px){.vania__fio{display:block;position:absolute;top:calc(100% + 2px);left:0;width:100%;height:14px;overflow:visible;pointer-events:none;opacity:0}.vania__fio path{fill:none;stroke:var(--champanhe);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke;stroke-dasharray:100;stroke-dashoffset:100}.js .reveal.is-in .vania__fio{animation:vania-fio-voar 4s cubic-bezier(.22,.8,.25,1) 1.5s both}.js .reveal.is-in .vania__fio path{animation:vania-fio-desenhar 4s cubic-bezier(.22,.8,.25,1) 1.5s both}}
+@keyframes vania-fio-voar{0%,100%{opacity:0;transform:translate3d(-6px,3px,0) rotate(-2deg)}31.25%,68.75%{opacity:1;transform:translate3d(0,0,0) rotate(0)}}
+@keyframes vania-fio-desenhar{0%,100%{stroke-dashoffset:100}31.25%,68.75%{stroke-dashoffset:0}}
+@media (min-width:600px) and (max-width:1023px){.vania__media{aspect-ratio:16/9}.vania__media img{object-position:center 40%}}
+@media (min-width:1024px){.vania{display:grid}.vania__media{grid-area:1/1;aspect-ratio:16/9;z-index:0}.vania__media::after{display:none}.vania__media img{object-position:center}.vania::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(30,22,21,.94) 0%,rgba(30,22,21,.86) 25%,rgba(30,22,21,.57) 43%,transparent 70%)}.vania__grid{grid-area:1/1;align-self:center;display:flex;flex-direction:column;align-items:flex-start;gap:18px;padding-block:64px}.vania__grid>div{max-width:440px}.vania__titulo{font-size:2.625rem}.vania .eyebrow,.vania__titulo,.vania__experiencia{color:var(--marfim)}.vania__texto{color:var(--marfim)}.vania__experiencia{border-color:var(--champanhe)}}
 .possibilidades{background-color:var(--espresso);background-image:radial-gradient(ellipse at 90% 22%,rgba(181,154,120,.08),transparent 55%),repeating-radial-gradient(ellipse 95% 44% at 115% 26%,transparent 0 47px,rgba(181,154,120,.055) 48px 49px,transparent 50px 96px);padding:64px 0 56px}
 @media (min-width:1024px){.possibilidades{padding:100px 0}
 }
@@ -184,13 +210,22 @@ a{color:inherit}
 @media (min-width:1024px){.possibilidades__head{margin-bottom:40px}
 }
 .possibilidades__titulo{color:var(--marfim);font-size:clamp(1.75rem,7.2vw,2.5rem);line-height:1.15;letter-spacing:.005em}
+.possibilidades__apoio{max-width:58ch;color:var(--areia);font-size:.9375rem;line-height:1.6}
 .lista-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(32px,5vw,52px);max-width:620px}
 .card__media{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;border-radius:18px;background:linear-gradient(150deg,#e9dfd2,#c4ae96);text-decoration:none}
 .card__media img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .5s var(--ease)}
 .card__placeholder{position:absolute;inset:0;display:grid;place-items:center;padding:24px;color:var(--espresso);font-size:.875rem;text-align:center}
 .card__media.has-img .card__placeholder{display:none}
-.card__legenda{display:flex;justify-content:center;padding-top:16px;text-align:center}
-.card__legenda span{display:inline-block;min-width:144px;padding:9px 20px;border-radius:999px;background:var(--champanhe);font-family:var(--serif);font-weight:500;font-size:1rem;line-height:1.2;color:var(--espresso)}
+.card__legenda{display:flex;justify-content:center;align-items:flex-start;min-height:128px;padding-top:16px;text-align:center}
+.card__pill{position:relative;display:flex;flex-direction:column;align-items:center;width:min(100%,420px);min-height:104px;padding:9px 16px 12px;color:var(--espresso)}
+.card__pill::before{content:"";position:absolute;top:0;left:50%;width:100%;height:100%;transform:translateX(-50%);border-radius:20px;background:var(--champanhe);box-shadow:inset 0 2px 3px rgba(255,250,243,.3),inset 0 -8px 14px rgba(50,34,26,.13),inset 0 0 0 1px rgba(90,63,44,.035);pointer-events:none}
+.card__pill-titulo,.card__pill-texto{position:relative;z-index:1}
+.card__pill-titulo{font:500 1rem/1.2 var(--serif)}
+.card__pill-texto{max-width:30ch;margin-top:13px;color:rgba(36,27,26,.9);font:400 .8125rem/1.42 var(--sans);text-wrap:balance}
+.js .card__pill::before{width:144px;height:38px;border-radius:999px;box-shadow:none;transition:width .44s var(--ease) .42s,height .42s var(--ease),border-radius .42s var(--ease),box-shadow .34s ease}
+.js .card__pill-texto{opacity:0;transform:translate3d(0,6px,0);transition:opacity .34s ease,transform .4s var(--ease)}
+.js .card__pill.is-expanded::before{width:100%;height:100%;border-radius:20px;box-shadow:inset 0 2px 3px rgba(255,250,243,.3),inset 0 -8px 14px rgba(50,34,26,.13),inset 0 0 0 1px rgba(90,63,44,.035);transition:width .46s var(--ease),height .44s var(--ease) .46s,border-radius .44s var(--ease) .46s,box-shadow .44s ease .46s}
+.js .card__pill.is-expanded .card__pill-texto{opacity:1;transform:none;transition-delay:.77s}
 .visualizador{position:fixed;inset:0;z-index:100;overflow-y:auto;overscroll-behavior:contain;background:rgba(30,22,21,.96);color:var(--marfim);padding:64px 16px max(20px,env(safe-area-inset-bottom,0px))}
 .visualizador__inner{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;width:min(100%,680px);margin:auto}
 .visualizador__fechar,.visualizador__nav{display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(247,242,234,.48);border-radius:50%;background:rgba(36,27,26,.7);color:var(--marfim);cursor:pointer}
@@ -278,6 +313,9 @@ a{color:inherit}
 .cuidado svg{width:22px;height:22px;flex:none;fill:none;stroke:var(--cacau);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .cuidado span{font:400 .9375rem/1.4 var(--sans);color:rgba(36,27,26,.9)}
 .cta--outline{align-self:flex-start;justify-content:center;min-height:48px;margin-top:16px;padding:12px 18px;border:1px solid var(--cacau);border-radius:3px;background:transparent}
+.cta--outline{position:relative;isolation:isolate;overflow:hidden}
+.cta--outline::before{content:"";position:absolute;inset:-25% -45%;z-index:-1;pointer-events:none;background:linear-gradient(108deg,transparent 25%,rgba(181,154,120,.07) 43%,rgba(181,154,120,.12) 51%,transparent 72%);animation:cta-brisa 11s ease-in-out infinite}
+@keyframes cta-brisa{0%,100%{transform:translate3d(-22%,2px,0) skewX(-3deg)}50%{transform:translate3d(22%,-2px,0) skewX(3deg)}}
 @media (hover:hover) and (pointer:fine){.cta--outline:hover{background:rgba(181,154,120,.12)}
 .cta--outline:hover svg{transform:none}
 }
@@ -353,7 +391,8 @@ img[data-img]:not([src]){display:none}
 @keyframes hero-seta{0%,100%{transform:translateY(-3px);opacity:.65}
 50%{transform:translateY(3px);opacity:1}
 }
-.js .hero .reveal{opacity:1!important;transform:none!important;transition:none!important}
+.js .hero .reveal:not(.btn){opacity:1!important;transform:none!important;transition:none!important}
+.js .hero .btn.reveal{opacity:1!important;transform:none;transition:none!important}
 .js .hero__media img{transform:none!important;transition:none!important}
 .hero__media img{object-position:58% 0}
 .hero__overlay{background:linear-gradient(to top,rgba(36,27,26,.96) 0%,rgba(36,27,26,.62) 27%,rgba(36,27,26,.08) 67%,rgba(36,27,26,.12) 100%)}
@@ -381,15 +420,17 @@ img[data-img]:not([src]){display:none}
 }
 @media (hover:hover) and (pointer:fine){.rodape__social:hover{color:var(--champanhe)}
 }
-.wa-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;width:56px;height:56px;border-radius:50%;background:var(--champanhe);color:var(--espresso);display:grid;place-items:center;text-decoration:none;box-shadow:0 10px 24px rgba(36,27,26,.28);transition:background-color .24s var(--ease),color .24s var(--ease),opacity .24s var(--ease),transform .24s var(--ease)}
+.wa-float{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;width:56px;height:56px;border-radius:50%;background:var(--champanhe);color:var(--espresso);display:grid;place-items:center;text-decoration:none;box-shadow:0 10px 24px rgba(36,27,26,.28);transition:background-color .24s var(--ease),color .24s var(--ease),opacity .55s ease,transform .7s cubic-bezier(.22,.8,.25,1)}
 .wa-float{border:0;cursor:pointer}
 .wa-float::before{content:"";position:absolute;inset:-3px;border:2px solid var(--champanhe);border-radius:50%;pointer-events:none;opacity:0}
-.wa-float.is-in:not(.is-open)::before{animation:wa-pulso 2.8s ease-out infinite}
-@keyframes wa-pulso{0%{transform:scale(1);opacity:.55}75%,100%{transform:scale(1.5);opacity:0}}
-.wa-float svg{width:28px;height:28px;fill:currentColor}
+.wa-float.is-in:not(.is-open):not(.has-opened)::before{animation:wa-pulso 7.2s ease-out infinite}
+@keyframes wa-pulso{0%,5%{transform:scale(1);opacity:0}8%{opacity:.22}19%,100%{transform:scale(1.26);opacity:0}}
+.wa-float svg{width:28px;height:28px;fill:currentColor;transform-origin:center}
+.wa-float.is-in:not(.is-open):not(.has-opened)>svg{animation:wa-chamada 7.2s ease-in-out infinite}
+@keyframes wa-chamada{0%,6%,17%,100%{transform:rotate(0) scale(1)}8%{transform:rotate(-3deg) scale(1.025)}10%{transform:rotate(2.5deg) scale(1.04)}12%{transform:rotate(-2deg) scale(1.035)}14%{transform:rotate(1deg) scale(1.02)}}
 .wa-float__badge{position:absolute;top:-6px;right:-5px;display:grid;place-items:center;min-width:21px;height:21px;padding:0 4px;border:2px solid var(--espresso);border-radius:50%;background:#c83239;color:#fff;font:700 .6875rem/1 var(--sans)}
-.js .wa-float{opacity:0;transform:scale(.95);pointer-events:none}
-.js .wa-float.is-in{opacity:1;transform:scale(1);pointer-events:auto}
+.js .wa-float{opacity:0;transform:translate3d(0,12px,0) scale(.97);pointer-events:none}
+.js .wa-float.is-in{opacity:1;transform:translate3d(0,0,0) scale(1);pointer-events:auto}
 .wa-chat{position:fixed;right:16px;bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:61;display:flex;flex-direction:column;width:min(350px,calc(100vw - 32px));max-height:min(440px,calc(100vh - 160px));overflow:hidden;border:1px solid rgba(247,242,234,.18);border-radius:16px;background:#eee7dc;box-shadow:0 18px 48px rgba(30,22,21,.32);font-family:var(--sans)}
 @supports (height:100svh){.wa-chat{max-height:min(440px,calc(100svh - 160px))}}
 .wa-chat__cabecalho{display:flex;align-items:center;justify-content:space-between;gap:12px;flex:none;min-height:56px;padding:8px 14px;background:var(--espresso);color:var(--marfim)}
@@ -411,11 +452,18 @@ img[data-img]:not([src]){display:none}
 .js .reveal{opacity:0;transform:translate3d(0,12px,0);transition:opacity .7s ease,transform .8s cubic-bezier(.22,.8,.25,1);transition-delay:0s}
 .js .reveal.is-in{opacity:1;transform:translate3d(0,0,0);transition-delay:calc(var(--i,0)*45ms)}
 @media (prefers-reduced-motion:reduce){.hero__scroll svg{animation:none}
+.js .card__pill::before{width:100%;height:100%;border-radius:20px;box-shadow:inset 0 2px 3px rgba(255,250,243,.3),inset 0 -8px 14px rgba(50,34,26,.13),inset 0 0 0 1px rgba(90,63,44,.035);transition:none!important}
+.js .card__pill-texto{opacity:1;transform:none;transition:none!important}
+.vania__fio,.js .reveal.is-in .vania__fio{display:none;animation:none}
+.js .vania__fio path,.js .reveal.is-in .vania__fio path{animation:none}
 .sobre::before{animation:none}
 .resultado__alca svg{animation:none}
-.wa-float::before,.wa-chat__digitando{animation:none!important}
+.wa-float::before,.wa-float>svg,.wa-chat__digitando,.cta--outline::before{animation:none!important}
+.cta--outline::before{display:none}
 .btn::before,.btn::after{animation:none!important}
 .btn::after{display:none}
+.btn,.cta--outline{animation:none!important}
+.menu__brand{opacity:1!important;transform:none!important;transition:none!important}
 .js .reveal,.menu__link,.menu .btn{opacity:1!important;transform:none!important;transition:none!important}
 .js .wa-float{transform:none!important;transition:none!important}
 .js .wa-float.is-in{opacity:1!important}
@@ -446,6 +494,10 @@ img[data-img]:not([src]){display:none}
 </div>
 </header>
 <div class="menu" id="menu-principal" hidden>
+<a class="menu__brand" href="#topo" aria-label="Vânia MegaHair — voltar ao início">
+<img class="brand__img" data-img="logo" alt="" width="160" height="43" hidden>
+<span class="brand__text" data-brand-text>Vânia MegaHair</span>
+</a>
 <button class="menu__close" id="fechar-menu" type="button" aria-label="Fechar menu">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
 </button>
@@ -539,10 +591,29 @@ img[data-img]:not([src]){display:none}
 </div>
 </div>
 </section>
+<section class="vania" id="vania" aria-labelledby="titulo-vania">
+<div class="vania__media">
+<picture>
+<source media="(max-width: 599px)" srcset="imagens/sobre-mobile.avif" type="image/avif" width="900" height="1350">
+<img src="imagens/sobre-desktop.avif" alt="Cena ilustrativa de Vânia avaliando os fios de uma cliente no salão" width="1600" height="900" loading="lazy" decoding="async">
+</picture>
+</div>
+<div class="container vania__grid">
+<div class="reveal" style="--i:0">
+<p class="eyebrow">Sobre a profissional</p>
+<h2 class="vania__titulo" id="titulo-vania">O cuidado começa pelos <span class="vania__frase">seus fios<svg class="vania__fio" viewBox="0 0 160 16" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="100" d="M2 9 C18 4 34 3 52 7 S80 12 98 8 S132 3 158 7"/></svg></span>.</h2>
+</div>
+<div class="reveal" style="--i:1">
+<p class="vania__texto">Vânia Aguiar avalia a quantidade, a resistência e a saúde do cabelo natural antes de indicar o mega hair. Seu objetivo é criar o visual que você deseja sem deixar de cuidar dos seus próprios fios.</p>
+<p class="vania__experiencia">Mais de 20 anos de experiência — Simone e Simaria já confiaram seus cabelos à Vânia.</p>
+</div>
+</div>
+</section>
 <section class="possibilidades" id="possibilidades" aria-labelledby="titulo-possibilidades">
 <div class="container possibilidades__head">
 <p class="eyebrow reveal" style="--i:0">O seu mega hair</p>
 <h2 class="possibilidades__titulo reveal" style="--i:1" id="titulo-possibilidades">Um mega hair pensado para você.</h2>
+<p class="possibilidades__apoio reveal" style="--i:2">Cabelo humano e uma escolha orientada pelos seus fios e pelo resultado que você procura.</p>
 </div>
 <ul class="lista-cards container">
 <li class="card-possibilidade reveal" style="--i:2">
@@ -550,21 +621,21 @@ img[data-img]:not([src]){display:none}
 <span class="card__placeholder" aria-hidden="true">Imagem em preparação</span>
 <img data-img="comprimento" alt="Capa recriada: cabelo longo visto de costas, referência visual de comprimento" width="1086" height="1448" loading="lazy" decoding="async">
 </a>
-<p class="card__legenda"><span>Comprimento</span></p>
+<p class="card__legenda"><span class="card__pill"><span class="card__pill-titulo">Comprimento</span><span class="card__pill-texto">Caimento pensado para seus fios e o visual que você deseja.</span></span></p>
 </li>
 <li class="card-possibilidade reveal" style="--i:3">
 <a class="card__media" href="https://www.instagram.com/p/DYFJYW0Jd8k/" target="_blank" rel="noopener noreferrer" aria-label="Ver publicação original de Volume no Instagram">
 <span class="card__placeholder" aria-hidden="true">Imagem em preparação</span>
 <img data-img="volume" alt="Capa recriada: cabelo escuro e volumoso visto de costas, referência visual de volume" width="1086" height="1448" loading="lazy" decoding="async">
 </a>
-<p class="card__legenda"><span>Volume</span></p>
+<p class="card__legenda"><span class="card__pill"><span class="card__pill-titulo">Volume</span><span class="card__pill-texto">A quantidade é definida conforme seu cabelo natural.</span></span></p>
 </li>
 <li class="card-possibilidade reveal" style="--i:4">
 <a class="card__media" href="https://www.instagram.com/p/DSGgjyXjLKg/" target="_blank" rel="noopener noreferrer" aria-label="Ver publicação original de Finalização no Instagram">
 <span class="card__placeholder" aria-hidden="true">Imagem em preparação</span>
 <img data-img="acabamento" alt="Capa recriada: cabelo liso com transição de castanho para loiro visto de costas, referência visual de finalização" width="1086" height="1448" loading="lazy" decoding="async">
 </a>
-<p class="card__legenda"><span>Finalização</span></p>
+<p class="card__legenda"><span class="card__pill"><span class="card__pill-titulo">Finalização</span><span class="card__pill-texto">Movimento para prender e pentear com facilidade.</span></span></p>
 </li>
 </ul>
 </section>
@@ -592,8 +663,8 @@ img[data-img]:not([src]){display:none}
 <p class="eyebrow eyebrow--claro reveal" style="--i:1">Como funciona</p>
 <h2 class="processo__titulo reveal" style="--i:2" id="titulo-processo">Seu próximo passo,<br>com confiança.</h2>
 <ol class="passos reveal" style="--i:3">
-<li class="passo"><span class="passo__num">01</span><span class="passo__txt">Compartilhe o que você deseja</span></li>
-<li class="passo"><span class="passo__num">02</span><span class="passo__txt">Converse sobre seus fios</span></li>
+<li class="passo"><span class="passo__num">01</span><span class="passo__txt">Envie uma foto dos seus fios e uma referência do resultado desejado</span></li>
+<li class="passo"><span class="passo__num">02</span><span class="passo__txt">Converse sobre comprimento, volume e saúde do cabelo</span></li>
 <li class="passo"><span class="passo__num">03</span><span class="passo__txt">Receba uma proposta para você</span></li>
 </ol>
 <a class="btn reveal" style="--i:4" data-wa href="#" target="_blank" rel="noopener noreferrer">Agendar avaliação
@@ -633,7 +704,7 @@ img[data-img]:not([src]){display:none}
 <div class="cuidados__painel">
 <p class="eyebrow eyebrow--claro reveal" style="--i:1">Cuidados e manutenção</p>
 <h2 class="cuidados__titulo reveal" style="--i:2" id="titulo-cuidados">O cuidado continua<br>depois do salão.</h2>
-<p class="cuidados__apoio reveal" style="--i:3">Entenda os cuidados em casa e quando fazer a manutenção indicada para o seu caso.</p>
+<p class="cuidados__apoio reveal" style="--i:3">O cuidado com o mega hair inclui os seus fios naturais. Você recebe orientações para a rotina em casa e para a manutenção indicada ao seu caso.</p>
 <ul class="cuidados__lista reveal" style="--i:4">
 <li class="cuidado">
 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4"/><path d="M12 3v3"/><path d="M9 8a3 3 0 0 1 3-2h0a3 3 0 0 1 3 2v11a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/><path d="M9 12h6"/></svg>
@@ -691,6 +762,28 @@ img[data-img]:not([src]){display:none}
 <div class="faq__resposta" id="faq-r3" role="region" aria-labelledby="faq-b3">
 <div class="faq__resposta-inner">
 <p>A frequência varia conforme a técnica e os seus fios. Na avaliação, pergunte sobre os cuidados em casa e o intervalo indicado para a manutenção.</p>
+</div>
+</div>
+</div>
+<div class="faq__item">
+<button class="faq__pergunta" type="button" id="faq-b4" aria-expanded="false" aria-controls="faq-r4">
+<span>Mega hair pode prejudicar meu cabelo natural?</span>
+<span class="faq__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+</button>
+<div class="faq__resposta" id="faq-r4" role="region" aria-labelledby="faq-b4">
+<div class="faq__resposta-inner">
+<p>Vânia avalia a saúde e a resistência dos seus fios antes de indicar a aplicação. A escolha da técnica, os cuidados e a retirada também fazem parte dessa conversa.</p>
+</div>
+</div>
+</div>
+<div class="faq__item">
+<button class="faq__pergunta" type="button" id="faq-b5" aria-expanded="false" aria-controls="faq-r5">
+<span>Meu cabelo é muito fino ou está com queda. Posso colocar?</span>
+<span class="faq__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+</button>
+<div class="faq__resposta" id="faq-r5" role="region" aria-labelledby="faq-b5">
+<div class="faq__resposta-inner">
+<p>Se o cabelo estiver muito ralo ou com queda, Vânia pode recomendar adiar a aplicação. A avaliação individual define o próximo passo para os seus fios.</p>
 </div>
 </div>
 </div>
@@ -812,7 +905,7 @@ var imagem = card.querySelector('img[data-img]');
 fotoAmpliada.src = imagem.getAttribute('src');
 fotoAmpliada.alt = imagem.alt;
 if(!modoGaleria){
-nomeAmpliado.textContent = card.querySelector('.card__legenda span').textContent;
+nomeAmpliado.textContent = card.querySelector('.card__pill-titulo').textContent;
 contadorAmpliado.textContent = (indiceAberto + 1) + ' / ' + itensAbertos.length;
 origemAmpliada.href = card.querySelector('.card__media').href;
 } else {
@@ -852,7 +945,7 @@ abertura = null;
 }
 capas.forEach(function(card, indice){
 var link = card.querySelector('.card__media');
-link.setAttribute('aria-label', 'Ampliar imagem de ' + card.querySelector('.card__legenda span').textContent);
+link.setAttribute('aria-label', 'Ampliar imagem de ' + card.querySelector('.card__pill-titulo').textContent);
 link.addEventListener('click', function(evento){
 if(evento.metaKey || evento.ctrlKey || evento.shiftKey || evento.altKey || evento.button !== 0){ return; }
 var imagem = card.querySelector('img[data-img]');
@@ -1029,6 +1122,7 @@ if(devolverFoco && flutuante.classList.contains('is-in')){ flutuante.focus(); }
 function abrirConversa(){
 conversa.hidden = false;
 flutuante.classList.add('is-open');
+flutuante.classList.add('has-opened');
 flutuante.setAttribute('aria-expanded','true');
 flutuante.setAttribute('aria-label','Fechar prévia da conversa com Vânia');
 badgeConversa.hidden = true;
@@ -1099,6 +1193,15 @@ reg.target.classList.toggle('is-in', reg.isIntersecting);
 foraDoHero.forEach(function(el){ observador.observe(el); });
 } else {
 foraDoHero.forEach(mostrar);
+}
+var pilulas = Array.prototype.slice.call(document.querySelectorAll('.card__pill'));
+if('IntersectionObserver' in window){
+var observadorPilulas = new IntersectionObserver(function(entradas){
+entradas.forEach(function(reg){ reg.target.classList.toggle('is-expanded', reg.intersectionRatio >= .3); });
+}, { threshold:.3, rootMargin:'0px 0px -10% 0px' });
+pilulas.forEach(function(pilula){ observadorPilulas.observe(pilula); });
+} else {
+pilulas.forEach(function(pilula){ pilula.classList.add('is-expanded'); });
 }
 if(document.readyState === 'complete'){ entradaHero(); }
 else { window.addEventListener('load', entradaHero); }

@@ -470,6 +470,35 @@ img[data-img]:not([src]){display:none}
 .js .hero__media img{transform:none!important;transition:none!important}
 .btn,.btn svg,.header,.wa-float,.burger,.burger__line,.menu__close,.sobre__link,.sobre__link svg,.card__media img,.visualizador__fechar,.visualizador__nav,.galeria__item img,.faq__resposta,.faq__icone,.rodape__social{transition:none!important}
 }
+
+/* Prova de autoridade: vídeo solicitado apenas após interação. */
+.simaria{padding:64px 0 72px;background:var(--marfim);border-bottom:1px solid rgba(181,154,120,.2)}
+.simaria__grid{display:grid;gap:28px;align-items:center}
+.simaria__copy{display:flex;flex-direction:column;gap:16px;max-width:490px}
+.simaria .eyebrow{color:var(--champanhe-texto)}
+.simaria__titulo{font-size:clamp(1.875rem,7.5vw,2.75rem);line-height:1.17;text-wrap:balance}
+.simaria__titulo em{font-weight:400;color:var(--cacau)}
+.simaria__texto{color:var(--cacau);font-size:.9375rem;line-height:1.75;max-width:43ch}
+.simaria__assinatura{display:flex;align-items:center;gap:12px;color:var(--cacau);font-size:.75rem;letter-spacing:.06em}
+.simaria__assinatura::before{content:"";width:32px;height:1px;background:var(--champanhe)}
+.simaria__figure{width:min(100%,340px);margin:0 auto}
+.simaria__player{position:relative;width:100%;aspect-ratio:9/16;overflow:hidden;border-radius:8px;background:var(--espresso);box-shadow:0 16px 38px rgba(36,27,26,.16);isolation:isolate}
+.simaria__video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--espresso)}
+.simaria__capa{position:absolute;inset:0;z-index:1;display:grid;place-items:center;width:100%;height:100%;padding:0;border:0;background:var(--espresso);color:var(--marfim);cursor:pointer;transition:opacity .4s ease,visibility .4s ease}
+.simaria__capa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.simaria__capa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(36,27,26,.12),rgba(36,27,26,.2) 55%,rgba(36,27,26,.48))}
+.simaria__play{position:relative;z-index:1;display:grid;place-items:center;width:72px;height:72px;border:1px solid rgba(247,242,234,.65);border-radius:50%;background:rgba(36,27,26,.25);backdrop-filter:blur(5px);box-shadow:0 4px 24px rgba(0,0,0,.12);transition:transform .3s ease,background .3s ease}
+.simaria__play svg{width:25px;height:25px;fill:currentColor;transform:translateX(2px)}
+.simaria__label{position:absolute;z-index:1;bottom:28px;left:16px;right:16px;text-align:center;font:500 .8125rem/1.5 var(--sans);letter-spacing:.04em}
+.simaria__capa:focus-visible{outline:3px solid var(--champanhe);outline-offset:-6px}
+.simaria__player.is-playing .simaria__capa{opacity:0;visibility:hidden;pointer-events:none}
+.simaria__player.is-loading .simaria__play{background:rgba(36,27,26,.55)}
+.simaria__caption{margin-top:14px;color:var(--cacau);font-size:.75rem;text-align:center;line-height:1.5}
+.simaria__status{margin-top:8px;color:var(--cacau);font-size:.8125rem;line-height:1.5}
+.simaria__status:empty{display:none}
+@media(hover:hover) and (pointer:fine){.simaria__capa:hover .simaria__play{transform:translateY(-3px);background:rgba(36,27,26,.4)}}
+@media(min-width:768px){.simaria{padding:88px 0}.simaria__grid{grid-template-columns:1fr 1fr;gap:56px;max-width:1040px}.simaria__figure{width:min(100%,360px)}.simaria__copy{justify-self:center}}
+@media(prefers-reduced-motion:reduce){.simaria__capa,.simaria__play{transition:none}}
 </style>
 </head>
 <body>
@@ -639,6 +668,28 @@ img[data-img]:not([src]){display:none}
 </li>
 </ul>
 </section>
+<section class="simaria" id="simaria" aria-labelledby="titulo-simaria">
+<div class="container simaria__grid">
+<div class="simaria__copy reveal" style="--i:0">
+<p class="eyebrow">Experiência que inspira confiança</p>
+<h2 class="simaria__titulo" id="titulo-simaria">Simaria confiou seus cabelos <em>às mãos de Vânia.</em></h2>
+<p class="simaria__texto">Um trabalho construído com técnica, cuidado e atenção aos detalhes. Veja de perto o processo de mega hair realizado por Vânia nos cabelos da cantora.</p>
+<p class="simaria__assinatura">Vânia Aguiar · Especialista em Mega Hair</p>
+</div>
+<figure class="simaria__figure reveal" style="--i:1">
+<div class="simaria__player" id="simaria-player">
+<button class="simaria__capa" type="button" aria-label="Assistir ao vídeo de Vânia trabalhando no mega hair de Simaria">
+<img src="imagens/capa-video.avif" alt="Simaria mostrando seus cabelos longos" width="720" height="1280" loading="lazy" decoding="async">
+<span class="simaria__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg></span>
+<span class="simaria__label">Assista ao processo</span>
+</button>
+</div>
+<figcaption class="simaria__caption">O cuidado de Vânia, em cada detalhe.</figcaption>
+<p class="simaria__status" role="status" aria-live="polite"></p>
+<noscript><p class="simaria__caption"><a href="imagens/Simaria-web.mp4">Assistir ao vídeo</a></p></noscript>
+</figure>
+</div>
+</section>
 <div class="visualizador" id="visualizador" role="dialog" aria-modal="true" aria-labelledby="visualizador-nome" hidden>
 <div class="visualizador__inner">
 <button class="visualizador__fechar" type="button" aria-label="Fechar imagem ampliada">
@@ -704,8 +755,12 @@ img[data-img]:not([src]){display:none}
 <div class="cuidados__painel">
 <p class="eyebrow eyebrow--claro reveal" style="--i:1">Cuidados e manutenção</p>
 <h2 class="cuidados__titulo reveal" style="--i:2" id="titulo-cuidados">O cuidado continua<br>depois do salão.</h2>
-<p class="cuidados__apoio reveal" style="--i:3">O cuidado com o mega hair inclui os seus fios naturais. Você recebe orientações para a rotina em casa e para a manutenção indicada ao seu caso.</p>
+<p class="cuidados__apoio reveal" style="--i:3">Seu cabelo natural também é prioridade. Vânia orienta os cuidados em casa e a manutenção para preservar a saúde dos fios, inclusive se você decidir deixar o mega hair no futuro.</p>
 <ul class="cuidados__lista reveal" style="--i:4">
+<li class="cuidado">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8c2.2 1.5 4.5 2.3 7 2.8v5.6c0 4.5-2.6 7.5-7 10-4.4-2.5-7-5.5-7-10V5.6c2.5-.5 4.8-1.3 7-2.8z"/><path d="M9.3 16.2c2.7-2.6 4.6-4.3 4.3-8"/><path d="M13.5 8.2c1.7 1.4 2.3 3 2.2 4.9"/></svg>
+<span>Saúde dos fios naturais</span>
+</li>
 <li class="cuidado">
 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4"/><path d="M12 3v3"/><path d="M9 8a3 3 0 0 1 3-2h0a3 3 0 0 1 3 2v11a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/><path d="M9 12h6"/></svg>
 <span>Cuidados em casa</span>
@@ -1205,6 +1260,50 @@ pilulas.forEach(function(pilula){ pilula.classList.add('is-expanded'); });
 }
 if(document.readyState === 'complete'){ entradaHero(); }
 else { window.addEventListener('load', entradaHero); }
+})();
+</script>
+
+<script>
+(function(){
+'use strict';
+var player=document.getElementById('simaria-player');
+if(!player)return;
+var cover=player.querySelector('.simaria__capa');
+var label=cover.querySelector('.simaria__label');
+var status=player.parentElement.querySelector('.simaria__status');
+var video=null;
+function reset(message){
+player.classList.remove('is-loading','is-playing');
+cover.disabled=false;
+label.textContent='Tentar reproduzir novamente';
+status.textContent=message;
+}
+cover.addEventListener('click',function(){
+cover.disabled=true;
+player.classList.add('is-loading');
+label.textContent='Carregando vídeo…';
+status.textContent='';
+if(!video){
+video=document.createElement('video');
+video.className='simaria__video';
+video.controls=true;
+video.playsInline=true;
+video.preload='none';
+video.setAttribute('aria-label','Processo de mega hair de Vânia nos cabelos de Simaria');
+video.addEventListener('playing',function(){
+player.classList.remove('is-loading');
+player.classList.add('is-playing');
+status.textContent='';
+video.focus({preventScroll:true});
+});
+video.addEventListener('error',function(){reset('Não foi possível carregar o vídeo. Toque para tentar novamente.');});
+// O endereço só é atribuído após o clique: zero requisições ao MP4 na abertura.
+video.src='imagens/Simaria-web.mp4';
+player.insertBefore(video,cover);
+}else if(video.error){video.load();}
+var attempt=video.play();
+if(attempt&&typeof attempt.catch==='function')attempt.catch(function(){reset('A reprodução não começou. Toque para tentar novamente.');});
+});
 })();
 </script>
 </body>
